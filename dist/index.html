@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css" />
   
   <title>Frontend Mentor | Scoot</title>
@@ -31,7 +33,7 @@
     </nav>
 
     <a href="index.html">
-      <img src="assets/logo.svg" alt="website logo" />
+      <img class="logo" src="assets/logo.svg" alt="website logo" />
     </a>
   </div> 
 </header>
@@ -39,10 +41,14 @@
 <main class="container">
   <section class="hero">
     <div class="hero__wrapper">
-      <h1>Scooter sharing made simple</h1>
-      <p>Scoot takes the hassle out of urban mobility. Our bikes are placed in convenient locations in each of our cities. Use our app to locate the nearest bike, unlock it with a tap, and you're away!</p>
-      <button class="hero__button">Get Scootin</button>
-      <img src="assets/patterns/right-arrow.svg" alt="right arrow in the hero section" />
+      <img src="assets/patterns/line.svg" alt="a yellow line" class="yellow-line" />
+      <div class="hero__content">
+        <h1>Scooter sharing made simple</h1>
+        <p>Scoot takes the hassle out of urban mobility. Our bikes are placed in convenient locations in each of our cities. Use our app to locate the nearest bike, unlock it with a tap, and you're away!</p>
+        <button class="hero__button button">Get Scootin</button>
+      </div>
+      <img src="assets/patterns/right-arrow.svg" alt="right arrow in the hero section" class="right-arrow" />
+      <img src="assets/patterns/white-circles.svg" alt="a row of white circles" class="white-circles" />
     </div>
   </section>
   <section class="features">
