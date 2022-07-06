@@ -6,3 +6,39 @@ $blueGray: #495567;
 $black: #000;
 $lightBlue: #e5ecfa;
 $offBlack: #333a44;
+
+.button {
+    width: 11.25rem;
+    margin: auto;
+    font-family: "Space Mono", monospace;
+    font-weight: bold;
+    border: none;
+    font-size: 0.9375rem;
+    padding: 0.875rem 2.4375rem;
+    background-color: $orange;
+    color: $white;
+}
+
+@mixin gridCenter {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin gridColumn {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexRow {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

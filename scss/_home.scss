@@ -6,7 +6,8 @@
 }
 
 .yellow-line,
-.white-circles {
+.white-circles,
+.circle {
   display: none;
 }
 
@@ -28,28 +29,17 @@
   }
 
   & p {
-    font-size: 0.9rem;
+    font-size: 0.9375rem;
     line-height: 1.74;
     margin-bottom: 2.125rem;
-  }
-
-  & .button {
-    width: 11.25rem;
-    margin: auto;
-    font-family: "Space Mono", monospace;
-    font-weight: bold;
-    border: none;
-    font-size: 0.9375rem;
-    padding: 0.875rem 2.4375rem;
-    background-color: $orange;
-    color: $white;
   }
 }
 
 .right-arrow {
   position: absolute;
-  left: -227px;
+  left: -264px;
   top: 524px;
+  scale: 1.1;
 }
 
 .features__wrapper {
@@ -68,7 +58,6 @@
   }
 
   & h3 {
-    font-family: "Space Mono", monospace;
     font-size: 1.25rem;
     font-weight: bold;
     line-height: 1.4;
@@ -86,6 +75,66 @@
   .features__card:nth-child(3) {
     margin-top: 3rem;
   }
+}
+
+.highlights__wrapper {
+  margin: 0 2rem;
+}
+
+.highlights__col {
+  @include gridCenter;
+  text-align: center;
+}
+
+.highlights__image {
+  @include flexRow;
+}
+
+.highlights__img {
+  border-radius: 50%;
+}
+
+.highlights__content {
+  
+    & h2 {
+      color: $blueGray;
+      font-size: 2rem;
+      letter-spacing: -1.43px;
+      line-height: 1;
+      margin: 3.5rem 0 2rem 0;
+    }
+
+    & p {
+      font-size: 0.905rem;
+      line-height: 1.73;
+      color: $lightGray;
+      margin-bottom: 2rem;
+    }
+
+    & button {
+      margin-bottom: 7.5rem;
+    }
+}
+
+.lft__dwn-arrow {
+  position: relative;
+  scale: 2.4;
+  left: -92px;
+  top: 80px;
+}
+
+.rght__rght-arrow {
+  position: relative;
+  scale: 1.6;
+  right: 450px;
+  top: -73px;
+}
+
+.lft__dwn-arrow2 {
+  position: relative;
+  scale: 2.6;
+  right: -44px;
+  bottom: 82px;
 }
 
 
