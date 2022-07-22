@@ -6,6 +6,7 @@ $blueGray: #495567;
 $black: #000;
 $lightBlue: #e5ecfa;
 $offBlack: #333a44;
+$accGray: #f2f5f9;
 
 .button {
     width: 11.25rem;
@@ -41,4 +42,10 @@ $offBlack: #333a44;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@mixin flexBtwn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

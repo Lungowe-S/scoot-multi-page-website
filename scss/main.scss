@@ -1,6 +1,7 @@
 @import "reset";
 @import "config";
 @import "home";
+@import "about";
 
 body {
   font-size: 1.25rem;
@@ -9,8 +10,12 @@ body {
   overflow-x: hidden;
 }
 
-h2, h3, h4 {
+h1, h2, h3, h4 {
   font-family: "Space Mono", monospace;
+}
+
+h1 {
+  color: $white;
 }
 
 a {
@@ -45,65 +50,65 @@ a {
   background-image: url("../assets/patterns/semi-circles.svg");
   background-repeat: no-repeat;
   background-position: -596px bottom;
-}
 
-.signup__wrapper {
-  margin: 0 2rem;
+  &__wrapper {
+    margin: 0 2rem;
+      & h2 {
+        text-align: center;
+        color: $white;
+        font-size: 2rem;
+        padding-top: 5.5rem;
+        letter-spacing: -1.43px;
+        line-height: 1;
+      }
+  }
 
-  & h2 {
-    text-align: center;
-    color: $white;
-    font-size: 2rem;
-    padding-top: 5.5rem;
-    letter-spacing: -1.43px;
+  &__apps {
+    @include flex;
+    column-gap: 0.80375rem;
+    margin: 2.5rem 1.5625rem 0 1.6875rem;
+    padding-bottom: 5.5rem;
   }
 }
 
-.signup__apps {
-  @include flex;
-  column-gap: 0.80375rem;
-  margin: 2.5rem 1.5625rem 0 1.6875rem;
-  padding-bottom: 5.5rem;
-}
-
-footer {
+.footer {
   background-color: $offBlack;
-}
 
-.footer__wrapper {
-  @include gridColumn;
-  text-align: center;
-  padding: 4rem 0 5.5rem 0;
-}
-
-.footer__social {
-  @include flex;
-}
-
-.footer__logo {
-  filter: invert(350%) sepia(100%) saturate(0%) hue-rotate(360deg) brightness(122%) contrast(101%);
-}
-
-.footer__nav {
-  & ul {
-    margin: 2.59rem 0 5.3125rem 0;
-    font-family: "Space Mono", monospace;
-    font-size: 0.9375rem;
-    font-weight: bold;
-
-    & li + li {
-      padding-top: 1rem;
-    }
-  } 
-
-  & a {
-    color: $lightGray;
+  &__wrapper {
+    @include gridColumn;
+    text-align: center;
+    padding: 4rem 0 5.5rem 0;
   }
-}
 
-.footer__social {
-  & a + a {
-    padding-left: 1.5rem;
+  &__social {
+    @include flex;
+  }
+
+  &__logo {
+    filter: invert(350%) sepia(100%) saturate(0%) hue-rotate(360deg) brightness(122%) contrast(101%);
+  }
+
+  &__nav {
+    & ul {
+        margin: 2.59rem 0 5.3125rem 0;
+        font-family: "Space Mono", monospace;
+        font-size: 0.9375rem;
+        font-weight: bold;
+    
+        & li+li {
+          padding-top: 1rem;
+        }
+      }
+    
+      & a {
+        color: $lightGray;
+      }
+  }
+
+  &__social {
+    & a+a {
+        padding-left: 1.5rem;
+      }
   }
 }
 
