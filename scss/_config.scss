@@ -7,6 +7,7 @@ $black: #000;
 $lightBlue: #e5ecfa;
 $offBlack: #333a44;
 $accGray: #f2f5f9;
+$lightYellow: #FFF4DF;
 
 .button {
     width: 11.25rem;
@@ -48,4 +49,22 @@ $accGray: #f2f5f9;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+@mixin media-md {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin media-lg {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin media-xl {
+    @media screen and (min-width: 1600px) {
+        @content;
+    }
 }

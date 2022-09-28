@@ -1,0 +1,21 @@
+.menu__btn {
+    display: flex;
+    align-items: center;
+    padding-top: 1.1rem;
+    padding-bottom: 1.1rem;
+    margin: 0 2rem;
+    justify-content: space-between;
+
+    & a {
+        //margin-left: 5.9rem;
+        margin: 0 auto;
+    }
+}
+
+.logo {
+    height: 1.25rem;
+}
+
+.nav {
+    display: none;
+}

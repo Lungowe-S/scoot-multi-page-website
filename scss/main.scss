@@ -1,7 +1,11 @@
 @import "reset";
 @import "config";
 @import "home";
+@import "menu";
 @import "about";
+@import "careers";
+@import "location";
+@import "responsive";
 
 body {
   font-size: 1.25rem;
@@ -22,28 +26,6 @@ a {
   text-decoration: none;
 }
 
-.menu__btn {
-  display: flex;
-  align-items: center;
-  padding-top: 1.1rem;
-  padding-bottom: 1.1rem;
-
-  & span {
-    padding-left: 2rem;
-  }
-
-  & a {
-    margin-left: 5.9rem;
-  }
-}
-
-.logo {
-  height: 1.25rem;
-}
-
-.nav {
-  display: none;
-}
 
 .signup {
   background-color: $blueGray;
