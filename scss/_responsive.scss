@@ -1,35 +1,58 @@
-@include media-md {
+@include media-sm {
     .menu__btn {
         margin: 0 2.4375rem;
-        
+    
         & a {
             margin: 0;
         }
-
+    
         & .hamburger__menu {
             display: none
         }
-
+    
         & .nav {
             display: flex;
+    
             &__menu {
                 display: flex;
                 font-size: 0.9375rem;
             }
-
+    
             &__item {
-                line-height: 1.67; 
+                line-height: 1.67;
             }
-
+    
             &__item:nth-child(2),
             &__item:nth-child(3) {
                 padding-left: 2rem;
             }
-
+    
             &__item a {
                 color: $lightGray;
             }
+        }
+    }
 
+    .logo {
+        height: 1.785rem;
+    }
+
+    .hero {
+        &__img {
+            grid-area: 0;
+        }
+        &__wrapper {
+            background-image: url("../assets/images/home-hero-tablet.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+}
+
+@include media-md {
+    .menu__btn {
+        & .nav {
             &__button {
                 display: flex;
                 margin: 0;
@@ -37,7 +60,30 @@
         }  
     }
 
-    .logo {
-        height: 1.785rem;
+    .hero {
+        &__content {
+            margin-left: clamp(2rem, 13vw, 6.125rem);
+            margin-right: clamp(2rem, 13vw, 6.125rem);      
+        }
+
+        &::before {
+            background-position: -127px 468px;
+        }
+
+        &::after {
+            content: "";
+            background-image: url("../assets/patterns/white-circles.svg");
+            background-repeat: no-repeat;
+            grid-area: 1/ -1;
+            background-position: 105% 541px;
+        }
     }
+
+    
+}
+
+@include media-lg {
+    .hero__wrapper {
+            background-image: url("../assets/images/home-hero-desktop.jpg");
+        }
 }
