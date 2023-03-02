@@ -165,8 +165,8 @@ select {
 .features__wrapper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  -ms-grid-columns: (minmax(325px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -175,8 +175,8 @@ select {
           align-items: center;
   text-align: center;
   padding: 7.5rem 0;
-  margin-left: clamp(2rem, 8vw, 6.125rem);
-  margin-right: clamp(2rem, 8vw, 6.125rem);
+  margin-left: clamp(2rem, 12.64vw, 6.125rem);
+  margin-right: clamp(2rem, 12.64vw, 6.125rem);
 }
 
 .features__wrapper img {
@@ -186,14 +186,14 @@ select {
 }
 
 .features__wrapper h3 {
-  font-size: 1.25rem;
+  font-size: clamp(1.25rem, 1.06vw + 1rem, 1.5rem);
   font-weight: bold;
   line-height: 1.4;
   color: #495567;
 }
 
 .features__wrapper p {
-  font-size: 0.9rem;
+  font-size: 0.9375rem;
   line-height: 1.5625rem;
   margin-top: 1.5rem;
   color: #939caa;
@@ -203,21 +203,13 @@ select {
   margin-top: 3rem;
 }
 
-.highlights__wrapper {
-  margin: 0 2rem;
-}
-
 .highlights__col {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-template-areas: "highlightImg  " "highlightContent";
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   text-align: center;
 }
 
@@ -228,15 +220,28 @@ select {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: highlightImg;
+  position: relative;
+  margin: 0 2rem;
 }
 
 .highlights__img {
   border-radius: 50%;
 }
 
+.highlights__content {
+  margin-left: clamp(2rem, -1.916rem + 16.75vw, 6.125rem);
+  margin-right: clamp(2rem, -1.916rem + 16.75vw, 6.125rem);
+}
+
 .highlights__content h2 {
   color: #495567;
-  font-size: 2rem;
+  font-size: clamp(2rem, 4.2vw + 1rem, 3rem);
   letter-spacing: -1.43px;
   line-height: 1;
   margin: 3.5rem 0 2rem 0;
@@ -254,24 +259,25 @@ select {
 }
 
 .lft__dwn-arrow {
-  position: relative;
-  scale: 2.4;
-  left: -92px;
-  top: 80px;
+  max-width: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .rght__rght-arrow {
-  position: relative;
-  scale: 1.6;
-  right: 450px;
-  top: -73px;
+  max-width: none;
+  position: absolute;
+  right: 0;
+  top: -8px;
+  left: -191px;
 }
 
 .lft__dwn-arrow2 {
-  position: relative;
-  scale: 2.6;
-  right: -44px;
-  bottom: 82px;
+  max-width: none;
+  position: absolute;
+  top: 0;
+  right: -554px;
 }
 
 .menu__btn {
@@ -357,8 +363,8 @@ select {
 .values__content {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  -ms-grid-columns: (minmax(360px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -618,80 +624,6 @@ select {
   text-align: center;
 }
 
-@media screen and (min-width: 600px) {
-  .menu__btn {
-    margin: 0 2.4375rem;
-  }
-  .menu__btn a {
-    margin: 0;
-  }
-  .menu__btn .hamburger__menu {
-    display: none;
-  }
-  .menu__btn .nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .menu__btn .nav__menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    font-size: 0.9375rem;
-  }
-  .menu__btn .nav__item {
-    line-height: 1.67;
-  }
-  .menu__btn .nav__item:nth-child(2), .menu__btn .nav__item:nth-child(3) {
-    padding-left: 2rem;
-  }
-  .menu__btn .nav__item a {
-    color: #939caa;
-  }
-  .logo {
-    height: 1.785rem;
-  }
-  .hero__img {
-    grid-area: 0;
-  }
-  .hero__wrapper {
-    background-image: url("../assets/images/home-hero-tablet.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .menu__btn .nav__button {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin: 0;
-  }
-  .hero__content {
-    margin-left: clamp(2rem, 13vw, 6.125rem);
-    margin-right: clamp(2rem, 13vw, 6.125rem);
-  }
-  .hero::before {
-    background-position: -127px 468px;
-  }
-  .hero::after {
-    content: "";
-    background-image: url("../assets/patterns/white-circles.svg");
-    background-repeat: no-repeat;
-    -ms-grid-row: 1;
-    grid-area: 1/ -1;
-    background-position: 105% 541px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .hero__wrapper {
-    background-image: url("../assets/images/home-hero-desktop.jpg");
-  }
-}
-
 body {
   font-size: 1.25rem;
   font-family: "Lexend Deca", sans-serif;
@@ -719,16 +651,19 @@ a {
 }
 
 .signup__wrapper {
-  margin: 0 2rem;
+  margin-left: clamp(2rem, -0.916rem + 12.48vw, 10.313rem);
+  margin-right: clamp(2rem, -0.916rem + 12.48vw, 10.313rem);
+  padding-bottom: 5.5rem;
 }
 
 .signup__wrapper h2 {
   text-align: center;
   color: #fff;
-  font-size: 2rem;
+  font-size: clamp(2rem, 1.051rem + 4.06vw, 3rem);
   padding-top: 5.5rem;
   letter-spacing: -1.43px;
   line-height: 1;
+  padding-bottom: 2.5rem;
 }
 
 .signup__apps {
@@ -743,8 +678,8 @@ a {
           justify-content: center;
   -webkit-column-gap: 0.80375rem;
           column-gap: 0.80375rem;
-  margin: 2.5rem 1.5625rem 0 1.6875rem;
-  padding-bottom: 5.5rem;
+  width: 16.026875rem;
+  margin: 0 auto;
 }
 
 .footer {
@@ -798,5 +733,135 @@ a {
 
 .footer__social a + a {
   padding-left: 1.5rem;
+}
+
+@media screen and (min-width: 600px) {
+  .menu__btn {
+    margin: 0 2.4375rem;
+  }
+  .menu__btn a {
+    margin: 0;
+  }
+  .menu__btn .hamburger__menu {
+    display: none;
+  }
+  .menu__btn .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .menu__btn .nav__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 0.9375rem;
+  }
+  .menu__btn .nav__item {
+    line-height: 1.67;
+  }
+  .menu__btn .nav__item:nth-child(2), .menu__btn .nav__item:nth-child(3) {
+    padding-left: 2rem;
+  }
+  .menu__btn .nav__item a {
+    color: #939caa;
+  }
+  .logo {
+    height: 1.785rem;
+  }
+  .hero__img {
+    grid-area: 0;
+  }
+  .hero__wrapper {
+    background-image: url("../assets/images/home-hero-tablet.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .signup {
+    background-position: center bottom;
+  }
+  .signup__wrapper h2 {
+    width: 75%;
+    margin: 0 auto;
+    letter-spacing: -2.14px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu__btn .nav__button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+  }
+  .hero__content {
+    margin-left: clamp(2rem, 13vw, 6.125rem);
+    margin-right: clamp(2rem, 13vw, 6.125rem);
+  }
+  .hero::before {
+    background-position: -127px 468px;
+  }
+  .hero::after {
+    content: "";
+    background-image: url("../assets/patterns/white-circles.svg");
+    background-repeat: no-repeat;
+    -ms-grid-row: 1;
+    grid-area: 1/ -1;
+    background-position: 105% 541px;
+  }
+  .features__card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-column-gap: 4.9375rem;
+            column-gap: 4.9375rem;
+  }
+  .features__wrapper img {
+    width: auto;
+  }
+  .features__content {
+    text-align: left;
+  }
+  .highlights__content {
+    margin-left: clamp(2rem, -1.916rem + 16.75vw, 6.125rem);
+    margin-right: clamp(2rem, -1.916rem + 16.75vw, 6.125rem);
+  }
+  .highlights__content h2 {
+    margin: 3.5rem auto 2rem auto;
+    width: 80%;
+  }
+  .circle {
+    display: block;
+    position: absolute;
+  }
+  .circle.circle1 {
+    right: -374px;
+  }
+  .circle.circle2 {
+    left: -374px;
+  }
+  .circle.circle3 {
+    right: -374px;
+  }
+  .rght__rght-arrow {
+    top: -3px;
+    left: -131px;
+  }
+  .lft__dwn-arrow2 {
+    top: 75px;
+    right: -417px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero__wrapper {
+    background-image: url("../assets/images/home-hero-desktop.jpg");
+  }
 }
 /*# sourceMappingURL=main.css.map */

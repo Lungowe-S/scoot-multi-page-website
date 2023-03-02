@@ -56,111 +56,23 @@
   }
 }
 
-// .hero,
-// .hero__wrapper,
-// .hero__img {
-//   grid-area: 1 / -1
-// }
-
-// .hero {
-//   height: 40.625rem;
-//   position: relative;
-//   z-index: 1;
-//   background-image: url("../assets/images/home-hero-mobile.jpg");
-
-//   &::before {
-//     position: absolute;
-//     content: "";
-//     background-image: url("../assets/patterns/right-arrow.svg");
-//     background-repeat: no-repeat;
-//     //background-size: cover;
-//     top: 0px;
-//     right: 0px;
-//     left: 0px;
-//     bottom: 0px;
-//     background-position: center top;
-//   }
-  
-//   &__wrapper {
-//     height: 100%;
-//     z-index: 1;
-//     position: relative;
-//   }
-
-//   &__content {
-//     display: grid;
-//     margin: 0 2rem;
-//     justify-content: center;
-//     align-items: center;
-//     padding-top: 7.1875rem;
-//     text-align: center;
-//     color: $white;
-    
-//       h1 {
-//         font-family: 'Space Mono', monospace;
-//         font-size: 2.5rem;
-//         line-height: 1;
-//         font-weight: bold;
-//         margin-bottom: 1.5rem;
-//       }
-    
-//       & p {
-//         font-size: 0.9375rem;
-//         line-height: 1.74;
-//         margin-bottom: 2.125rem;
-//       }
-//   }
-// }
-
  .yellow-line,
  .white-circles,
  .circle {
    display: none;
  }
 
-// .right-arrow {
-//   position: relative;
-//   left: -264px;
-//   top: 537px;
-//   scale: 1.1;
-
-//     &::before {
-//       position: absolute;
-//       content: "";
-//       background-image: url("../assets/patterns/right-arrow.svg");
-//     }
-
-//     &__wrapper {
-//       position: relative;
-      
-//     }
-// }
-
-// .right-arrow {
-//   position: relative;
-
-//   &::before {
-//     position: absolute;
-//     content: "";
-//     top: 0;
-//     right: 0;
-//     left: 0;
-//     bottom: 0;
-//     background-image: url("../assets/patterns/right-arrow.svg");
-//     background-repeat: no-repeat;
-//   }
-// }
 
 .features {
   &__wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 7.5rem 0;
-    margin-left: unquote("clamp(2rem, 8vw, 6.125rem)");
-    margin-right: unquote("clamp(2rem, 8vw, 6.125rem)");
+    margin-left: unquote("clamp(2rem, 12.64vw, 6.125rem)");
+    margin-right: unquote("clamp(2rem, 12.64vw, 6.125rem)");
     
       & img {
         display: inline-block;
@@ -169,14 +81,14 @@
       }
     
       & h3 {
-        font-size: 1.25rem;
+        font-size: unquote("clamp(1.25rem, 1.06vw + 1rem, 1.5rem)");
         font-weight: bold;
         line-height: 1.4;
         color: $blueGray;
       }
     
       & p {
-        font-size: 0.9rem;
+        font-size: 0.9375rem;
         line-height: 1.5625rem;
         margin-top: 1.5rem;
         color: $lightGray;
@@ -190,17 +102,24 @@
 }
 
 .highlights {
-  &__wrapper {
-    margin: 0 2rem;
-  }
+  // &__wrapper {
+  //   margin: 0 2rem;
+  // }
 
   &__col {
-    @include gridCenter;
+    display: grid;
+    grid-template-areas:
+      "highlightImg  "
+      "highlightContent";
+    justify-content: center;
     text-align: center;
   }
 
   &__image {
-    @include flexRow;
+    @include flex;
+    grid-area: highlightImg;
+    position: relative;
+    margin: 0 2rem;
   }
 
   &__img {
@@ -208,9 +127,11 @@
   }
 
   &__content {
+    margin-left: unquote("clamp(2rem, -1.916rem + 16.75vw, 6.125rem)");
+    margin-right: unquote("clamp(2rem, -1.916rem + 16.75vw, 6.125rem)");
     & h2 {
         color: $blueGray;
-        font-size: 2rem;
+        font-size: unquote("clamp(2rem, 4.2vw + 1rem, 3rem)");
         letter-spacing: -1.43px;
         line-height: 1;
         margin: 3.5rem 0 2rem 0;
@@ -230,24 +151,24 @@
 }
 
 .lft__dwn-arrow {
-  position: relative;
-  scale: 2.4;
-  left: -92px;
-  top: 80px;
+  max-width: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .rght__rght-arrow {
-  position: relative;
-  scale: 1.6;
-  right: 450px;
-  top: -73px;
+  max-width: none;
+  position: absolute;
+  right: 0;
+  top: -8px;
+  left: -191px;
 }
 
 .lft__dwn-arrow2 {
-  position: relative;
-  scale: 2.6;
-  right: -44px;
-  bottom: 82px;
+  max-width: none;
+  position: absolute;
+  top: 0;
+  right: -554px;
 }
-
 

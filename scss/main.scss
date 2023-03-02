@@ -5,7 +5,7 @@
 @import "about";
 @import "careers";
 @import "location";
-@import "responsive";
+
 
 body {
   font-size: 1.25rem;
@@ -34,22 +34,25 @@ a {
   background-position: -596px bottom;
 
   &__wrapper {
-    margin: 0 2rem;
+    margin-left: unquote("clamp(2rem, -0.916rem + 12.48vw, 10.313rem)");
+    margin-right: unquote("clamp(2rem, -0.916rem + 12.48vw, 10.313rem)");
+    padding-bottom: 5.5rem;
       & h2 {
         text-align: center;
         color: $white;
-        font-size: 2rem;
+        font-size: unquote("clamp(2rem, 1.051rem + 4.06vw, 3rem)");
         padding-top: 5.5rem;
         letter-spacing: -1.43px;
         line-height: 1;
+        padding-bottom: 2.5rem;
       }
   }
 
   &__apps {
     @include flex;
     column-gap: 0.80375rem;
-    margin: 2.5rem 1.5625rem 0 1.6875rem;
-    padding-bottom: 5.5rem;
+    width: 16.026875rem;
+    margin: 0 auto;
   }
 }
 
@@ -93,5 +96,5 @@ a {
       }
   }
 }
-
+@import "responsive";
 

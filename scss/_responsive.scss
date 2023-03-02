@@ -48,6 +48,16 @@
             background-size: cover;
         }
     }
+
+    .signup {
+        background-position: center bottom;
+
+        &__wrapper h2 {
+            width: 75%;
+            margin: 0 auto;
+            letter-spacing: -2.14px;
+        }
+    }
 }
 
 @include media-md {
@@ -79,7 +89,60 @@
         }
     }
 
-    
+    .features {
+        &__card {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 4.9375rem;
+        }
+
+        &__wrapper img {
+            width: auto;
+        }
+
+        &__content {
+            text-align: left;
+        }
+    }
+
+    .highlights {
+        &__content {
+            margin-left: unquote("clamp(2rem, -1.916rem + 16.75vw, 6.125rem)");
+            margin-right: unquote("clamp(2rem, -1.916rem + 16.75vw, 6.125rem)");
+            & h2 {
+                margin: 3.5rem auto 2rem auto;
+                width: 80%;
+            }
+        }
+    }
+
+    .circle {
+        display: block;
+        position: absolute;
+
+        &.circle1 {
+            right: -374px;
+        }
+
+        &.circle2 {
+            left: -374px;
+        }
+
+        &.circle3 {
+            right: -374px;
+        }
+    }
+
+    .rght__rght-arrow {
+        top: -3px;
+        left: -131px;
+    }
+
+    .lft__dwn-arrow2 {
+        top: 75px;
+        right: -417px;
+    }
 }
 
 @include media-lg {
