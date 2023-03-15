@@ -14,10 +14,14 @@
 <body>
 <header>
   <div class="menu__btn">
-    <span>
+    <span class="hamburger__menu">
       <img src="assets/icons/hamburger.svg" alt="hamburger menu" />
     </span>
-
+  
+    <a href="index.html">
+      <img class="logo" src="assets/logo.svg" alt="website logo" />
+    </a>
+  
     <nav class="nav">
       <ul class="nav__menu">
         <li class="nav__item">
@@ -31,16 +35,14 @@
         </li>
       </ul>
     </nav>
-
-    <a href="index.html">
-      <img src="assets/logo.svg" alt="website logo" />
-    </a>
-  </div>
+  
+    <button class="nav__button button">Get Scootin</button>
 </header>
 
 <main class="container">
-  <section class="about hero">
+  <section class="about">
     <div class="about__wrapper">
+      <img class="about__image" src="assets/images/about-hero-mobile.jpg" alt="image of trucks at a zebra crossing" srcset="about-hero-tablet.jpg 768w" />
       <div class="about__title-wrapper">
         <h1 class="about__title">About</h1>
         <img class="semi-circle" src="assets/patterns/semi-circles.svg" alt="semi-circles" />
@@ -264,5 +266,6 @@
   </div>
 </footer>
 
+<script src="js/about.js"></script>
 </body>
 </html>

@@ -64,7 +64,8 @@
             display: flex;
             justify-content: space-between;
             padding: 2.1875rem 0 2rem 0;
-            margin: 0 1.25rem;
+            margin-left: unquote("clamp(1.25rem, -5.223rem + 17.26vw, 10.313rem)");
+            margin-right: unquote("clamp(1.25rem, -5.357rem + 17.62vw, 10.5rem)");
         }
 
         &__nav {
@@ -85,6 +86,14 @@
         &__menu {
             display: flex;
             column-gap: 2rem;
+        }
+    }
+    /* ==== ABOUT STYLES ====*/
+    .about {
+        &__wrapper {
+            background-image: url("../assets/images/about-hero-tablet.jpg");
+            padding-bottom: 12.5rem;
+            //background-size: 0;
         }
     }
 }
@@ -147,6 +156,11 @@
         }
     }
 
+    .footer {
+        &__nav {
+            column-gap: 3.66125rem;
+        }
+    }
 
 
     .circle {
