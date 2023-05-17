@@ -457,7 +457,7 @@ select {
   color: #495567;
 }
 .vacancy__title {
-  font-size: 1.125rem;
+  font-size: clamp(1.125rem, 0.767rem + 1.53vw, 1.5rem);
   line-height: 1.335;
   letter-spacing: -0.8px;
   padding-bottom: 0.25rem;
@@ -814,6 +814,10 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  .vacancy__title {
+    letter-spacing: -1.07px;
+    line-height: 1.083;
   }
   .vacancy__position {
     -webkit-margin-after: 0;
