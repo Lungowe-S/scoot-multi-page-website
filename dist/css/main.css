@@ -768,7 +768,7 @@ a {
     top: 75px;
     right: -417px;
   }
-  /* === Home Page Styles === */
+  /* === About Page Styles === */
   .about {
     justify-content: stretch;
   }
@@ -789,7 +789,7 @@ a {
     line-height: 1;
     text-align: left;
   }
-  /* === Home Page Styles === */
+  /* === Careers Page Styles === */
   .careers {
     justify-content: stretch;
   }
@@ -809,6 +809,23 @@ a {
     letter-spacing: -2.5px;
     line-height: 1;
     text-align: left;
+  }
+  .vacancy__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .vacancy__position {
+    -webkit-margin-after: 0;
+            margin-block-end: 0;
+    text-align: left;
+  }
+  .vacancy__button {
+    width: 11.25rem;
+    margin: 0;
+  }
+  .vacancy__button.button {
+    padding: 1rem 2.4375rem;
   }
 }
 @media screen and (min-width: 1024px) {
