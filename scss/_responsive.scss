@@ -38,14 +38,11 @@
     }
 
     .hero {
+        background-image: url("../assets/images/home-hero-tablet.jpg");
+        background-position: center;
+
         &__img {
             grid-area: 0;
-        }
-        &__wrapper {
-            background-image: url("../assets/images/home-hero-tablet.jpg");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
         }
     }
 
@@ -90,10 +87,25 @@
     }
     /* ==== ABOUT STYLES ====*/
     .about {
-        &__wrapper {
-            background-image: url("../assets/images/about-hero-tablet.jpg");
-            padding-bottom: 12.5rem;
-            //background-size: 0;
+        background-image: url("../assets/images/about-hero-tablet.jpg");
+        background-repeat: no-repeat;
+        height: 12.5rem;
+        background-size: cover;
+
+        &__highlights-wrapper {
+            padding: 9rem 0 7.5rem 0;
+        }
+    }
+
+    /* ==== CAREERS STYLES ====*/
+    .careers {
+        background-image: url("../assets/images/careers-locations-hero-tablet.jpg");
+        background-repeat: no-repeat;
+        height: 12.5rem;
+        background-size: cover;
+
+        &__highlights-wrapper {
+            padding: 9rem 0 0 0;
         }
     }
 }
@@ -189,6 +201,56 @@
         top: 75px;
         right: -417px;
     }
+
+     /* === Home Page Styles === */
+     .about {
+        justify-content: stretch;
+
+        &::after {
+            content: "";
+            background-image: url("../assets/patterns/white-circles.svg");
+            background-repeat: no-repeat;
+            height: 3.9375rem;
+            grid-area: 1/-1;
+            z-index: 1;
+            background-position: 106%;
+        }
+
+        &__wrapper {
+            padding-left: 6.0625rem;
+        }
+
+        &__title {
+            letter-spacing: -2.5px;
+            line-height: 1;
+            text-align: left;
+        }
+     }
+
+    /* === Home Page Styles === */
+    .careers {
+        justify-content: stretch;
+    
+        &::after {
+            content: "";
+            background-image: url("../assets/patterns/white-circles.svg");
+            background-repeat: no-repeat;
+            height: 3.9375rem;
+            grid-area: 1/-1;
+            z-index: 1;
+            background-position: 106%;
+        }
+    
+        &__wrapper {
+            padding-left: 6.0625rem;
+        }
+    
+        &__title {
+            letter-spacing: -2.5px;
+            line-height: 1;
+            text-align: left;
+        }
+        }
 }
 
 @include media-lg {

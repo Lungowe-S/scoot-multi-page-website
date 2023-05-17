@@ -1,11 +1,16 @@
 .about {
-    // &__wrapper {
-    //     background-image: url("../assets/images/about-hero-mobile.jpg");
-    //     background-repeat: no-repeat;
-    //     background-size: 100%;
-    //     padding-bottom: 10rem;
-    //     position: relative
-    // }
+        background-image: url("../assets/images/about-hero-mobile.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 10rem;
+        position: relative;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    
+    &__wrapper {
+        grid-area: 1/-1;
+    }
 
     // &__title-wrapper {
     //     position: absolute;
@@ -15,7 +20,7 @@
 
     &__title {
         text-align: center;
-        font-size: 2.5rem;
+        font-size: unquote("clamp(2.5rem, 1.546rem + 4.07vw, 3.5rem)");
     }
 
     &__highlights-wrapper {
@@ -43,12 +48,13 @@
 
 .values {
     &__wrapper {
-        margin: 0 2rem;
+        margin-left: unquote("clamp(2rem, -1.023rem + 15.11vw, 10.313rem)");
+        margin-right: unquote("clamp(2rem, -1.023rem + 15.11vw, 10.313rem)");
     }
 
     &__title {
         text-align: center;
-        font-size: 2rem;
+        font-size: unquote("clamp(2rem, 1.636rem + 1.82vw, 3rem)");
         line-height: 1;
         letter-spacing: -1.43px;
     }
@@ -69,7 +75,9 @@
             font-size: 0.9375rem;
             color: $lightGray;
             line-height: 1.67;
-            margin-block-start: 1.6875rem;
+            //margin-block-start: 1.6875rem;
+            width: 80%;
+            margin: auto
         }
     }
 
@@ -95,6 +103,10 @@
 .value__title,
 .values__id {
     color: $blueGray;
+}
+
+.value__title {
+    margin-block-end: 1.6875rem;
 }
 
 
@@ -151,6 +163,7 @@
         padding: 2rem 1.75rem 1.5rem 2rem;
         background-color: $accGray;
         column-gap: 1rem;
+        width: 100%;
     }
 
     &__content {

@@ -6,18 +6,23 @@
   display: grid;
   height: 40.625rem;
   grid-area: 1 / -1;
+  background-image: url("../assets/images/home-hero-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 
   &__wrapper,
   &__img {
     grid-area: 1 / -1
   }
 
-  &__img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    min-height: 0;
-  }
+  
+
+  // &__img {
+  //   object-fit: cover;
+  //   width: 100%;
+  //   height: 100%;
+  //   min-height: 0;
+  // }
 
   &::before {
     content: "";
@@ -66,13 +71,13 @@
 .features {
   &__wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 7.5rem 0;
-    margin-left: unquote("clamp(2rem, 12.64vw, 6.125rem)");
-    margin-right: unquote("clamp(2rem, 12.64vw, 6.125rem)");
+    margin-left: unquote("clamp(2rem, -1.023rem + 15.11vw, 10.313rem)");
+    margin-right: unquote("clamp(2rem, -1.023rem + 15.11vw, 10.313rem)");
     
       & img {
         display: inline-block;
