@@ -474,21 +474,22 @@ select {
   width: 100%;
 }
 
-.location__wrapper {
+.location {
   background-image: url("../assets/images/careers-location-hero-mobile.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
-  padding-bottom: 10rem;
+  height: 10rem;
   position: relative;
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
-.location__title-wrapper {
-  position: absolute;
-  top: 35%;
-  left: 22.7%;
+.location__wrapper {
+  grid-area: 1/-1;
 }
 .location__title {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: clamp(2.5rem, 1.546rem + 4.07vw, 3.5rem);
   line-height: 1;
   letter-spacing: -1.79px;
 }
@@ -503,7 +504,7 @@ select {
   background-image: url("../assets/images/world-map-mobile.png");
   background-repeat: no-repeat;
   background-size: 100%;
-  padding-bottom: 9.5rem;
+  padding-bottom: clamp(9.5rem, -1.533rem + 47.07vw, 21.063rem);
   margin-top: 4.3125rem;
 }
 .sites__cities {
@@ -701,9 +702,16 @@ a {
   .careers__highlights-wrapper {
     padding: 9rem 0 0 0;
   }
+  /* ==== LOCATION STYLES ====*/
+  .location {
+    background-image: url("../assets/images/careers-locations-hero-tablet.jpg");
+    background-repeat: no-repeat;
+    height: 12.5rem;
+    background-size: cover;
+  }
 }
 @media screen and (min-width: 768px) {
-  /* === Home Page Styles === */
+  /* ==== HOME STYLES ==== */
   .menu__btn .nav__button {
     display: flex;
     margin: 0;
@@ -768,7 +776,7 @@ a {
     top: 75px;
     right: -417px;
   }
-  /* === About Page Styles === */
+  /* ==== ABOUT STYLES ==== */
   .about {
     justify-content: stretch;
   }
@@ -789,7 +797,7 @@ a {
     line-height: 1;
     text-align: left;
   }
-  /* === Careers Page Styles === */
+  /* ==== CAREER STYLES ==== */
   .careers {
     justify-content: stretch;
   }
@@ -830,6 +838,37 @@ a {
   }
   .vacancy__button.button {
     padding: 1rem 2.4375rem;
+  }
+  /* ==== LOCATION STYLES ==== */
+  .location {
+    justify-content: stretch;
+  }
+  .location::after {
+    content: "";
+    background-image: url("../assets/patterns/white-circles.svg");
+    background-repeat: no-repeat;
+    height: 3.9375rem;
+    grid-area: 1/-1;
+    z-index: 1;
+    background-position: 106%;
+  }
+  .location__wrapper {
+    padding-left: 6.0625rem;
+  }
+  .location__title {
+    letter-spacing: -2.5px;
+    line-height: 1;
+    text-align: left;
+  }
+  .sites__map {
+    background-image: url("../assets/images/world-map-tablet.png");
+    background-repeat: no-repeat;
+    padding-bottom: 0;
+    height: 21.0625rem;
+    width: 100%;
+  }
+  .sites__cities {
+    display: none;
   }
 }
 @media screen and (min-width: 1024px) {

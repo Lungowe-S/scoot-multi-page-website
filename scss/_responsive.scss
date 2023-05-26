@@ -108,10 +108,18 @@
             padding: 9rem 0 0 0;
         }
     }
+
+    /* ==== LOCATION STYLES ====*/
+    .location {
+        background-image: url("../assets/images/careers-locations-hero-tablet.jpg");
+        background-repeat: no-repeat;
+        height: 12.5rem;
+        background-size: cover;
+    }
 }
 
 @include media-md {
-    /* === Home Page Styles === */
+    /* ==== HOME STYLES ==== */
     .menu__btn {
         & .nav {
             &__button {
@@ -202,7 +210,7 @@
         right: -417px;
     }
 
-     /* === About Page Styles === */
+     /* ==== ABOUT STYLES ==== */
      .about {
         justify-content: stretch;
 
@@ -227,7 +235,7 @@
         }
      }
 
-    /* === Careers Page Styles === */
+    /* ==== CAREER STYLES ==== */
     .careers {
         justify-content: stretch;
     
@@ -276,6 +284,45 @@
 
         &__button.button {
             padding: 1rem 2.4375rem;
+        }
+    }
+
+    /* ==== LOCATION STYLES ==== */
+    .location {
+        justify-content: stretch;
+
+        &::after {
+            content: "";
+            background-image: url("../assets/patterns/white-circles.svg");
+            background-repeat: no-repeat;
+            height: 3.9375rem;
+            grid-area: 1/-1;
+            z-index: 1;
+            background-position: 106%;
+        }
+
+        &__wrapper {
+            padding-left: 6.0625rem;
+        }
+
+        &__title {
+            letter-spacing: -2.5px;
+            line-height: 1;
+            text-align: left;
+        }
+    }
+
+    .sites {
+        &__map {
+            background-image: url("../assets/images/world-map-tablet.png");
+            background-repeat: no-repeat;
+            padding-bottom: 0;
+            height: 21.0625rem;
+            width: 100%;
+        }
+
+        &__cities {
+            display: none;
         }
     }
 }
