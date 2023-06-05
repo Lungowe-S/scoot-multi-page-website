@@ -500,13 +500,6 @@ select {
 .sites__wrapper {
   margin: 0 2rem;
 }
-.sites__map {
-  background-image: url("../assets/images/world-map-mobile.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  padding-bottom: clamp(9.5rem, -1.533rem + 47.07vw, 21.063rem);
-  margin-top: 4.3125rem;
-}
 .sites__cities {
   display: grid;
   grid-gap: 1rem;
@@ -859,13 +852,6 @@ a {
     letter-spacing: -2.5px;
     line-height: 1;
     text-align: left;
-  }
-  .sites__map {
-    background-image: url("../assets/images/world-map-tablet.png");
-    background-repeat: no-repeat;
-    padding-bottom: 0;
-    height: 21.0625rem;
-    width: 100%;
   }
   .sites__cities {
     display: none;

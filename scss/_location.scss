@@ -28,15 +28,7 @@
     &__wrapper {
         margin: 0 2rem;
     }
-
-    &__map {
-        background-image: url("../assets/images/world-map-mobile.png");
-        background-repeat: no-repeat;
-        background-size: 100%;
-        padding-bottom: unquote("clamp(9.5rem, -1.533rem + 47.07vw, 21.063rem)");
-        margin-top: 4.3125rem;
-    }
-
+    
     &__cities {
         display: grid;
         grid-gap: 1rem;
