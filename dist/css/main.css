@@ -500,6 +500,10 @@ select {
 .sites__wrapper {
   margin: 0 2rem;
 }
+.sites-img {
+  margin-top: clamp(4.313rem, 3.19rem + 4.79vw, 7.5rem);
+  width: 100%;
+}
 .sites__cities {
   display: grid;
   grid-gap: 1rem;
