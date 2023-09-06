@@ -52,13 +52,13 @@
       font-weight: bold;
       margin-bottom: 1.5rem;
     }
-  
-      & p {
-      font-size: 0.9375rem;
-      line-height: 1.74;
-      margin-bottom: 2.125rem;
-      }
-  }
+ }
+
+    &__lede {
+        font-size: 0.9375rem;
+        line-height: 1.74;
+        margin-bottom: 2.125rem;
+    }
 }
 
  .yellow-line,
@@ -71,13 +71,13 @@
 .features {
   &__wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 7.5rem 0;
-    margin-left: unquote("clamp(2rem, -1.023rem + 15.11vw, 10.313rem)");
-    margin-right: unquote("clamp(2rem, -1.023rem + 15.11vw, 10.313rem)");
+    margin-left: unquote("clamp(2rem, -0.926rem + 12.48vw, 8.438rem)");
+    margin-right: unquote("clamp(2rem, -0.926rem + 12.48vw, 8.438rem)");
     
       & img {
         display: inline-block;
@@ -90,6 +90,7 @@
         font-weight: bold;
         line-height: 1.4;
         color: $blueGray;
+        letter-spacing: -0.89px;
       }
     
       & p {
@@ -98,12 +99,17 @@
         margin-top: 1.5rem;
         color: $lightGray;
       }
+
+      & .features__card:nth-child(2),
+      & .features__card:nth-child(3) {
+        margin-top: 3rem;
+      }
   }
 
-  &__card:nth-child(2),
-  &__card:nth-child(3) {
-    margin-top: 3rem;
-  }
+  // &__card:nth-child(2),
+  // &__card:nth-child(3) {
+  //   margin-top: 3rem;
+  // }
 }
 
 .highlights {

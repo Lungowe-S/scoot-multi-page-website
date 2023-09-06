@@ -13,28 +13,31 @@
 </head>
 <body>
 <header>
-  <div class="menu__btn">
+  <div class="header__wrapper">
     <span class="hamburger__menu">
       <img src="assets/icons/hamburger.svg" alt="hamburger menu" />
     </span>
 
-    <a href="index.html">
-      <img class="logo" src="assets/logo.svg" alt="website logo" />
-    </a>
-
-    <nav class="nav">
-      <ul class="nav__menu">
-        <li class="nav__item">
-          <a href="about.html">About</a>
-        </li>
-        <li class="nav__item">
-          <a href="locations.html">Location</a>
-        </li>
-        <li class="nav__item">
-          <a href="careers.html">Careers</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="logo-wrapper">
+      <a href="index.html">
+        <img class="logo" src="assets/logo.svg" alt="website logo" />
+      </a>
+      
+      <nav class="nav">
+        <ul class="nav__menu">
+          <li class="nav__item">
+            <a href="about.html">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="locations.html">Location</a>
+          </li>
+          <li class="nav__item">
+            <a href="careers.html">Careers</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    
 
     <button class="nav__button button">Get Scootin</button>
   </div> 
@@ -46,7 +49,7 @@
     <div class="hero__wrapper">
       <div class="hero__content">
         <h1>Scooter sharing made simple</h1>
-        <p>Scoot takes the hassle out of urban mobility. Our bikes are placed in convenient locations in each of our cities. Use our app to locate the nearest bike, unlock it with a tap, and you're away!</p>
+        <p class="hero__lede">Scoot takes the hassle out of urban mobility. Our bikes are placed in convenient locations in each of our cities. Use our app to locate the nearest bike, unlock it with a tap, and you're away!</p>
         <button class="hero__button button">Get Scootin</button>
       </div>
       <img src="assets/patterns/line.svg" alt="a yellow line" class="yellow-line" />
@@ -57,7 +60,8 @@
   </section>
   <section class="features">
     <div class="features__wrapper">
-      <div class="features__card location">
+      <!-- <div class="features__strip"></div> -->
+      <div class="features__card">
         <img src="assets/icons/locate.svg" alt="icon of a mobile app" />
         <div class="features__content">
           <h3>Locate with app</h3>
@@ -125,10 +129,10 @@
       <h2>Sign up and Scoot off today</h2>
       <div class="signup__apps">
         <a href="#">
-          <img src="assets/icons/app-store.svg" alt="image of the app-store" />
+          <img class="signup__app" src="assets/icons/app-store.svg" alt="image of the app-store" />
         </a>
         <a href="#">
-          <img src="assets/icons/google-play.svg" alt="image of the google app"/>
+          <img class="signup__app" src="assets/icons/google-play.svg" alt="image of the google app"/>
         </a>
       </div>
     </div>

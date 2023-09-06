@@ -13,30 +13,34 @@
 </head>
 <body>
   <header>
-    <div class="menu__btn">
+    <div class="header__wrapper">
       <span class="hamburger__menu">
         <img src="assets/icons/hamburger.svg" alt="hamburger menu" />
       </span>
   
-      <a href="index.html">
-        <img class="logo" src="assets/logo.svg" alt="website logo" />
-      </a>
+      <div class="logo-wrapper">
+        <a href="index.html">
+          <img class="logo" src="assets/logo.svg" alt="website logo" />
+        </a>
   
-      <nav class="nav">
-        <ul class="nav__menu">
-          <li class="nav__item">
-            <a href="about.html">About</a>
-          </li>
-          <li class="nav__item">
-            <a href="locations.html">Location</a>
-          </li>
-          <li class="nav__item">
-            <a href="careers.html">Careers</a>
-          </li>
-        </ul>
-      </nav>
+        <nav class="nav">
+          <ul class="nav__menu">
+            <li class="nav__item">
+              <a href="about.html">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="locations.html">Location</a>
+            </li>
+            <li class="nav__item">
+              <a href="careers.html">Careers</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+  
   
       <button class="nav__button button">Get Scootin</button>
+    </div>
   </header>
 
   <main class="container">
@@ -50,12 +54,24 @@
     </section>
     <section class="sites">
       <div class="sites__wrapper">
-        <picture>
-          <source class="sites__desk sites-img" srcset="assets/images/world-map-desktop.png" media="(min-width: 56.25rem)">
-          <source class="sites__tablet sites-img" srcset="assets/images/world-map-tablet.png" media="(min-width: 40rem)">
-          <img class="sites__mobile sites-img" src="assets/images/world-map-mobile.png" alt="image of the world map with selected cities" />
-        </picture>
         <div class="sites__map">
+          <picture>
+            <source class="sites__desk sites-img" srcset="assets/images/world-map-desktop.png" media="(min-width: 56.25rem)">
+            <source class="sites__tablet sites-img" srcset="assets/images/world-map-tablet.png" media="(min-width: 48rem)">
+            <img class="sites__mobile sites-img" src="assets/images/world-map-mobile.png" alt="image of the world map with selected cities" />
+          </picture>
+          <div class="sites__pin nyork">
+            <span>New York</span>
+          </div>
+          <div class="sites__pin london">
+            <span>London</span>
+          </div>
+          <div class="sites__pin jakarta">
+            <span>Jakarta</span>
+          </div>
+          <div class="sites__pin yokohama">
+            <span>Yokohama</span>
+          </div>
         </div>
         <div class="sites__cities">
           <button class="sites__city">New York</button>
@@ -77,10 +93,10 @@
         <h2>Sign up and Scoot off today</h2>
         <div class="signup__apps">
           <a href="#">
-            <img src="assets/icons/app-store.svg" alt="image of the app-store" />
+            <img class="signup__app" src="assets/icons/app-store.svg" alt="image of the app-store" />
           </a>
           <a href="#">
-            <img src="assets/icons/google-play.svg" alt="image of the google app" />
+            <img class="signup__app" src="assets/icons/google-play.svg" alt="image of the google app" />
           </a>
         </div>
       </div>

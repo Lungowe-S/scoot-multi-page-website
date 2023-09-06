@@ -51,6 +51,10 @@
         padding: 1.375rem 0;
         background-color: $lightYellow;
     }
+
+    &__pin {
+        display: none;
+    }
 }
 
 .listing {
