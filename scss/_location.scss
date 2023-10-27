@@ -26,7 +26,8 @@
 
 .sites {
     &__wrapper {
-        margin: 0 2rem;
+        margin-left: unquote("clamp(2rem, -0.926rem + 12.48vw, 8.438rem)");
+        margin-right: unquote("clamp(2rem, -0.926rem + 12.48vw, 8.438rem)");
     }
 
     &-img {
@@ -58,8 +59,35 @@
 }
 
 .listing {
+    margin-top: unquote("clamp(4.5rem, 3.136rem + 5.82vw, 7.5rem)");
+    margin-bottom: unquote("clamp(6.875rem, 6.591rem + 1.21vw, 7.5rem);");
+
     &__content {
-        margin: 0 2rem;
+        margin-left: unquote("clamp(2rem, -0.926rem + 12.48vw, 8.438rem)");
+        margin-right: unquote("clamp(2rem, -0.926rem + 12.48vw, 8.438rem)");
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        & p {
+            font-size: 0.9375rem;
+            line-height: 1.73;
+            color: #939caa;
+            margin-bottom: 2rem;
+        }
+        & h2 {
+            color: #495567;
+            font-size: unquote("clamp(2rem, 1.046rem + 4.07vw, 3rem)");
+            letter-spacing: -1.43px;
+            line-height: 1;
+            margin-block-end: unquote("clamp(2rem, 1.523rem + 2.04vw, 2.5rem)");
+        }
+    }
+
+    &__button {
+        position: absolute;
+        bottom: -49px;
     }
 }

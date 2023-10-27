@@ -75,7 +75,7 @@ select {
   }
 }
 .button {
-  width: 11.25rem;
+  width: auto;
   margin: auto;
   font-family: "Space Mono", monospace;
   font-weight: bold;
@@ -84,6 +84,12 @@ select {
   padding: 0.875rem 2.4375rem;
   background-color: #fcb72b;
   color: #fff;
+}
+
+.button:hover {
+  background-color: #fff;
+  color: #fcb72b;
+  border: 2px solid #fcb72b;
 }
 
 .nav__button {
@@ -100,6 +106,12 @@ select {
 }
 .hero__wrapper, .hero__img {
   grid-area: 1/-1;
+}
+.hero__button {
+  z-index: 1;
+}
+.hero__button:hover {
+  background-color: transparent;
 }
 .hero::before {
   content: "";
@@ -171,6 +183,11 @@ select {
   margin-top: 3rem;
 }
 
+.highlights__wrapper {
+  display: grid;
+  grid-gap: 11.5rem;
+  margin-block-end: 9.4rem;
+}
 .highlights__col {
   display: grid;
   grid-template-areas: "highlightImg  " "highlightContent";
@@ -191,6 +208,7 @@ select {
 .highlights__content {
   margin-left: clamp(2rem, -1.916rem + 16.75vw, 6.125rem);
   margin-right: clamp(2rem, -1.916rem + 16.75vw, 6.125rem);
+  position: relative;
 }
 .highlights__content h2 {
   color: #495567;
@@ -206,7 +224,9 @@ select {
   margin-bottom: 2rem;
 }
 .highlights__content button {
-  margin-bottom: 7.5rem;
+  position: absolute;
+  left: 50px;
+  right: 50px;
 }
 
 .lft__dwn-arrow {
@@ -256,6 +276,11 @@ select {
 
 .nav {
   display: none;
+}
+
+.nav__menu {
+  font-family: "Space Mono", monospace;
+  font-weight: bold;
 }
 
 .about {
@@ -410,6 +435,14 @@ select {
   display: grid;
 }
 
+.accordion.is-open .accordion__indicator {
+  transform: rotate(180deg);
+}
+
+.accordion.is-open .accordion__header button:hover {
+  background-color: #f2f5f9;
+}
+
 .careers {
   background-image: url("../assets/images/careers-location-hero-mobile.jpg");
   background-repeat: no-repeat;
@@ -438,7 +471,8 @@ select {
   margin-block-end: 7.5rem;
 }
 .vacancies__wrapper {
-  margin: 0 2rem;
+  margin-left: clamp(2rem, -0.926rem + 12.48vw, 8.438rem);
+  margin-right: clamp(2rem, -0.926rem + 12.48vw, 8.438rem);
   text-align: center;
 }
 
@@ -450,7 +484,9 @@ select {
   margin-block-end: 0;
 }
 .vacancy__wrapper {
-  padding: 2.25rem 2rem 2rem 2rem;
+  padding: 2.25rem 2rem 5rem 2rem;
+  position: relative;
+  width: 100%;
 }
 .vacancy__title, .vacancy p {
   color: #495567;
@@ -469,7 +505,12 @@ select {
   margin-block-end: 1rem;
 }
 .vacancy__button {
-  width: 100%;
+  position: absolute;
+  right: 10.2%;
+  width: 79.5%;
+}
+.vacancy__button:hover {
+  background-color: #f2f5f9;
 }
 
 .location {
@@ -496,7 +537,8 @@ select {
 }
 
 .sites__wrapper {
-  margin: 0 2rem;
+  margin-left: clamp(2rem, -0.926rem + 12.48vw, 8.438rem);
+  margin-right: clamp(2rem, -0.926rem + 12.48vw, 8.438rem);
 }
 .sites-img {
   margin-top: clamp(4.313rem, 3.19rem + 4.79vw, 7.5rem);
@@ -522,9 +564,36 @@ select {
   display: none;
 }
 
+.listing {
+  margin-top: clamp(4.5rem, 3.136rem + 5.82vw, 7.5rem);
+  margin-bottom: clamp(6.875rem, 6.591rem + 1.21vw, 7.5rem);;
+}
 .listing__content {
-  margin: 0 2rem;
+  margin-left: clamp(2rem, -0.926rem + 12.48vw, 8.438rem);
+  margin-right: clamp(2rem, -0.926rem + 12.48vw, 8.438rem);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.listing__content p {
+  font-size: 0.9375rem;
+  line-height: 1.73;
+  color: #939caa;
+  margin-bottom: 2rem;
+}
+.listing__content h2 {
+  color: #495567;
+  font-size: clamp(2rem, 1.046rem + 4.07vw, 3rem);
+  letter-spacing: -1.43px;
+  line-height: 1;
+  margin-block-end: clamp(2rem, 1.523rem + 2.04vw, 2.5rem);
+}
+.listing__button {
+  position: absolute;
+  bottom: -49px;
 }
 
 body {
@@ -606,8 +675,14 @@ a {
 .footer__nav a {
   color: #939caa;
 }
+.footer__nav a:hover {
+  color: #fcb72b;
+}
 .footer__social a + a {
   padding-left: 1.5rem;
+}
+.footer__social a:hover {
+  filter: invert(0.5) sepia(100%) saturate(0%) hue-rotate(900deg) brightness(122%) contrast(101%);
 }
 
 @media screen and (min-width: 600px) {
@@ -635,6 +710,9 @@ a {
   }
   .header__wrapper .nav__item a {
     color: #939caa;
+  }
+  .header__wrapper .nav__item a:hover {
+    color: #fcb72b;
   }
   .logo {
     height: 1.785rem;
@@ -717,14 +795,19 @@ a {
     margin-left: clamp(2.438rem, -8.229rem + 22.22vw, 8.438rem);
     margin-right: clamp(2.438rem, -8.229rem + 22.22vw, 8.438rem);
     padding: 1.375rem 0;
+    position: relative;
   }
   .header__wrapper .nav__button {
     display: flex;
     margin: 0;
   }
+  .nav__button.button {
+    position: absolute;
+    right: 0;
+  }
   .hero__content {
-    margin-left: clamp(6.125rem, 0.08rem + 12.59vw, 10.313rem);
-    margin-right: clamp(6.125rem, 0.08rem + 12.59vw, 10.313rem);
+    margin-left: clamp(6.125rem, 2.014rem + 8.56vw, 8.438rem);
+    margin-right: clamp(6.125rem, 2.014rem + 8.56vw, 8.438rem);
   }
   .hero::before {
     background-position: -127px 468px;
@@ -756,6 +839,16 @@ a {
   }
   .features__wrapper {
     position: relative;
+  }
+  .features__wrapper::after {
+    content: "";
+    display: inline-flex;
+    background-color: #E5ECF4;
+    height: 512px;
+    width: 2.5%;
+    position: absolute;
+    top: 0;
+    left: 41px;
   }
   .features__wrapper img {
     width: auto;
@@ -861,6 +954,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 2.25rem 2rem 2.25rem 2rem;
   }
   .vacancy__title {
     letter-spacing: -1.07px;
@@ -873,9 +967,8 @@ a {
   .vacancy__button {
     width: 11.25rem;
     margin: 0;
-  }
-  .vacancy__button.button {
     padding: 1rem 2.4375rem;
+    right: 5.5%;
   }
   /* ==== LOCATION STYLES ==== */
   .location {
@@ -906,39 +999,62 @@ a {
   }
   .sites__pin {
     display: block;
-    width: 7.5rem;
+    width: auto;
     font-family: "Space Mono", monospace;
     font-weight: bold;
     background-color: #fcb726;
     color: #495567;
-    font-size: 0.8125rem;
+    font-size: clamp(0.813rem, -0.18rem + 2.07vw, 1.5rem);
     text-align: center;
     letter-spacing: -1.07px;
     border: none;
     padding: 0.5rem 1.875rem 0.5rem 1.875rem;
     position: absolute;
   }
-  .yokohama {
-    top: 19%;
-    right: 5%;
-  }
-  .jakarta {
-    top: 51%;
-    right: 15%;
-  }
-  .london {
-    top: 9%;
-    right: 47%;
-  }
-  .nyork {
-    top: 16%;
-    right: 68%;
+  .sites__pin::after {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #fcb72b;
+    content: " ";
+    bottom: -10px;
+    position: absolute;
+    left: 43%;
   }
 }
+.yokohama {
+  top: 16%;
+  right: 5%;
+}
+
+.jakarta {
+  top: 47%;
+  right: 13%;
+}
+
+.london {
+  top: 4%;
+  right: 48%;
+}
+
+.nyork {
+  top: 14%;
+  right: 68%;
+}
+
+.listing__content h2 {
+  max-width: 15ch;
+  letter-spacing: -2.14px;
+}
+
 @media screen and (min-width: 895px) {
   .features__wrapper {
     grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
     gap: 1.9rem;
+  }
+  .features__wrapper::after {
+    display: none;
   }
   .features__wrapper img {
     align-self: start;
@@ -958,6 +1074,12 @@ a {
   .accordion__wrapper {
     width: 690px;
   }
+  .accordion__header button:hover {
+    background-color: #FFF4DF;
+  }
+  .accordion__header button:active {
+    background-color: #f2f5f9;
+  }
   .faq__wrapper {
     margin-left: clamp(2rem, -16.89rem + 33.77vw, 8.438rem);
     margin-right: clamp(2rem, -16.89rem + 33.77vw, 8.438rem);
@@ -970,11 +1092,14 @@ a {
   .hero__wrapper {
     background-image: url("../assets/images/home-hero-desktop.jpg");
   }
+  .highlights__wrapper {
+    margin-block-end: 9.4rem;
+  }
   .highlights__col {
     grid-template-areas: "highlightContent highlightImg";
     grid-template-columns: 1fr 1fr;
     text-align: left;
-    margin-block-end: 10rem;
+    position: relative;
   }
   .highlights__col.city {
     grid-template-areas: "highlightImg highlightContent";
@@ -992,6 +1117,11 @@ a {
   }
   .highlights__content p {
     width: 27.8125rem;
+  }
+  .highlights__content .button {
+    left: 0;
+    right: 0;
+    margin: 0;
   }
   .highlights__image {
     margin: 0;
@@ -1029,8 +1159,51 @@ a {
     grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
     gap: 1.5rem;
   }
+  /* ==== CAREER STYLES ==== */
+  .careers {
+    background-image: url("../assets/images/careers-locations-hero-desktop.jpg");
+  }
+  .careers__wrapper {
+    padding-left: clamp(6.063rem, 1.84rem + 8.8vw, 8.438rem);
+  }
+  /* ==== LOCATION STYLES ==== */
+  .location {
+    background-image: url("../assets/images/careers-locations-hero-desktop.jpg");
+  }
+  .location__wrapper {
+    padding-left: clamp(6.063rem, 1.84rem + 8.8vw, 8.438rem);
+  }
+  .listing__content {
+    flex-direction: row;
+    justify-content: unset;
+  }
+  .listing__content h2 {
+    max-width: 12ch;
+    text-align: left;
+    margin-block-end: 0rem;
+  }
+  .listing__content p {
+    text-align: left;
+    width: 27.8125rem;
+    margin-left: 1.875rem;
+    margin-bottom: 0rem;
+  }
+  .listing__button {
+    position: absolute;
+    bottom: 30px;
+    right: 0px;
+  }
 }
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1024px) and (min-width: 1121px) {
+  .features__wrapper::after {
+    display: inline-flex;
+    height: 14px;
+    width: 971px;
+    top: 32%;
+    left: -134px;
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 1300px) {
   .hero::before {
     background-position: 693px 350px;
   }
@@ -1056,10 +1229,16 @@ a {
     margin: unset;
     margin-left: 5.9375rem;
   }
+  .hero__button:hover {
+    background-color: none;
+  }
   .yellow-line {
     display: grid;
     position: relative;
     top: -142px;
+    top: 197px;
+    grid-area: 1/-1;
+    left: -165px;
   }
   .features__wrapper {
     padding: 10rem 0 12.5rem 0;
@@ -1070,5 +1249,43 @@ a {
   /* ==== ABOUT STYLES ==== */
   .about::after {
     background-position: 103%;
+  }
+  /* ==== CAREERS STYLES ==== */
+  .careers::after {
+    background-position: 103%;
+  }
+  /* ==== LOCATION STYLES ==== */
+  .location::after {
+    background-position: 103%;
+  }
+  .sites__pin {
+    letter-spacing: -1.071px;
+  }
+  .sites__pin.nyork {
+    padding: 1.375rem 2.46875rem 1.375rem 2.40625rem;
+  }
+  .sites__pin.london {
+    padding: 1.375rem 3.3125rem 1.375rem 3.3125rem;
+  }
+  .sites__pin.yokohama {
+    padding: 1.375rem 2.46875rem 1.375rem 2.40625rem;
+  }
+  .sites__pin.jakarta {
+    padding: 1.375rem 2.875rem 1.375rem 2.875rem;
+  }
+  .nyork {
+    top: 13%;
+    right: 70%;
+  }
+  .london {
+    top: 2.5%;
+    right: 46.5%;
+  }
+  .yokohama {
+    top: 13%;
+  }
+  .jakarta {
+    top: 46%;
+    right: 12.7%;
   }
 }/*# sourceMappingURL=main.css.map */

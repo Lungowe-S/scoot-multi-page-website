@@ -9,7 +9,7 @@
     & a {
         //margin-left: 5.9rem;
         margin: 0 auto;
-    }
+    }   
 }
 
 .logo-wrapper {
@@ -26,4 +26,9 @@
 
 .nav {
     display: none;
+}
+
+.nav__menu {
+    font-family: "Space Mono", monospace;
+    font-weight: bold;
 }

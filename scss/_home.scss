@@ -15,7 +15,15 @@
     grid-area: 1 / -1
   }
 
-  
+  &__button {
+    z-index: 1;
+  }
+
+  &__button:hover {
+    background-color: transparent;
+  }
+
+
 
   // &__img {
   //   object-fit: cover;
@@ -113,9 +121,11 @@
 }
 
 .highlights {
-  // &__wrapper {
-  //   margin: 0 2rem;
-  // }
+  &__wrapper {
+    display: grid;
+    grid-gap: 11.5rem;
+    margin-block-end: 9.4rem;
+  }
 
   &__col {
     display: grid;
@@ -140,6 +150,8 @@
   &__content {
     margin-left: unquote("clamp(2rem, -1.916rem + 16.75vw, 6.125rem)");
     margin-right: unquote("clamp(2rem, -1.916rem + 16.75vw, 6.125rem)");
+    position: relative;
+    
     & h2 {
         color: $blueGray;
         font-size: unquote("clamp(2rem, 4.2vw + 1rem, 3rem)");
@@ -156,7 +168,10 @@
       }
     
       & button {
-        margin-bottom: 7.5rem;
+        // margin-bottom: 7.5rem;
+        position: absolute;
+        left: 50px;
+        right: 50px;
       }
   }
 }

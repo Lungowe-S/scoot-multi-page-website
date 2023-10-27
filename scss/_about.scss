@@ -186,3 +186,11 @@
 .accordion.is-open .accordion__content {
     display: grid;
 }
+
+.accordion.is-open .accordion__indicator {
+    transform: rotate(180deg);
+}
+
+.accordion.is-open .accordion__header button:hover {
+    background-color: $accGray;
+}
