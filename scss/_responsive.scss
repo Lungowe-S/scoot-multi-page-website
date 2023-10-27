@@ -1,5 +1,5 @@
 @include media-sm {
-    .menu__btn {
+    .header__wrapper {
         margin: 0 2.4375rem;
     
         & a {
@@ -29,6 +29,10 @@
     
             &__item a {
                 color: $lightGray;
+            }
+
+            &__item a:hover {
+                color: $orange;
             }
         }
     }
@@ -61,7 +65,7 @@
             display: flex;
             justify-content: space-between;
             padding: 2.1875rem 0 2rem 0;
-            margin-left: unquote("clamp(1.25rem, -5.223rem + 17.26vw, 10.313rem)");
+            margin-left: unquote("clamp(1.25rem, -5.938rem + 19.17vw, 8.438rem)");
             margin-right: unquote("clamp(1.25rem, -5.357rem + 17.62vw, 10.5rem)");
         }
 
@@ -108,11 +112,29 @@
             padding: 9rem 0 0 0;
         }
     }
+
+    /* ==== LOCATION STYLES ====*/
+    .location {
+        background-image: url("../assets/images/careers-locations-hero-tablet.jpg");
+        background-repeat: no-repeat;
+        height: 12.5rem;
+        background-size: cover;
+    }
 }
 
 @include media-md {
-    /* === Home Page Styles === */
-    .menu__btn {
+    /* ==== HOME STYLES ==== */
+    .logo-wrapper {
+        width: auto;
+        gap: 3.63625rem;
+    }
+
+    .header__wrapper {
+        margin-left: clamp(2.438rem, -8.229rem + 22.22vw, 8.438rem);
+        margin-right: clamp(2.438rem, -8.229rem + 22.22vw, 8.438rem);
+        padding: 1.375rem 0;
+        position: relative;
+
         & .nav {
             &__button {
                 display: flex;
@@ -121,10 +143,15 @@
         }  
     }
 
+    .nav__button.button {
+        position: absolute;
+        right: 0;
+    }
+
     .hero {
         &__content {
-            margin-left: clamp(2rem, 13vw, 6.125rem);
-            margin-right: clamp(2rem, 13vw, 6.125rem);      
+            margin-left: clamp(6.125rem, 2.014rem + 8.56vw, 8.438rem);
+            margin-right: clamp(6.125rem, 2.014rem + 8.56vw, 8.438rem);
         }
 
         &::before {
@@ -141,17 +168,65 @@
     }
 
     .features {
+        &__strip::after {
+                content: "";
+                display: inline-flex;
+                background-color: #E5ECF4;
+                height: 512px;
+                width: 2.5%;
+                position: absolute;
+                top: 0;
+                left: 41px;
+            }
+
         &__card {
             display: flex;
             justify-content: center;
             align-items: center;
             column-gap: 4.9375rem;
+            position: relative;
+        }
+
+        &__wrapper {
+            position: relative;
+        }
+
+        &__wrapper::after {
+            content: "";
+            display: inline-flex;
+            background-color: #E5ECF4;
+            height: 512px;
+            width: 2.5%;
+            position: absolute;
+            top: 0;
+            left: 41px;
         }
 
         &__wrapper img {
             width: auto;
+            z-index: 1;
         }
 
+        &__wrapper h3 {
+            letter-spacing: -1.07px;
+        }
+
+        // &__wrapper p {
+        //     width: 25rem;
+        // }
+      
+        // &__wrapper img::before {
+        //     background-image: url("../assets/patterns/line.svg");
+        //      content: "";
+        // }
+
+        &__line {
+            position: absolute;
+            bottom: 90%;
+            left: -53px;
+            transform: rotate(90deg);
+        }
+                
         &__content {
             text-align: left;
         }
@@ -166,6 +241,18 @@
                 width: 80%;
             }
         }
+    }
+
+    .signup {
+        padding-bottom: 3.925rem;
+
+        &__wrapper {
+            padding-bottom: 0;
+            h2 {
+                    padding-top: 3.875rem;
+                }
+        }
+          
     }
 
     .footer {
@@ -202,7 +289,7 @@
         right: -417px;
     }
 
-     /* === Home Page Styles === */
+     /* ==== ABOUT STYLES ==== */
      .about {
         justify-content: stretch;
 
@@ -217,7 +304,7 @@
         }
 
         &__wrapper {
-            padding-left: 6.0625rem;
+            padding-left: unquote("clamp(6.063rem, 1.84rem + 8.8vw, 8.438rem)");
         }
 
         &__title {
@@ -227,7 +314,7 @@
         }
      }
 
-    /* === Home Page Styles === */
+    /* ==== CAREER STYLES ==== */
     .careers {
         justify-content: stretch;
     
@@ -250,11 +337,459 @@
             line-height: 1;
             text-align: left;
         }
+    }
+
+    .vacancy {
+        &__wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2.25rem 2rem 2.25rem 2rem;
         }
+
+        &__title {
+            letter-spacing: -1.07px;
+            line-height: 1.083;
+        }
+
+        &__position {
+            margin-block-end: 0;
+            text-align: left;
+        }
+
+        &__button {
+            width: 11.25rem;
+            margin: 0;
+            padding: 1rem 2.4375rem;
+            right: 5.5%;
+        }
+
+        // &__button.button {
+        //     padding: 1rem 2.4375rem;
+        // }
+    }
+
+    /* ==== LOCATION STYLES ==== */
+    .location {
+        justify-content: stretch;
+
+        &::after {
+            content: "";
+            background-image: url("../assets/patterns/white-circles.svg");
+            background-repeat: no-repeat;
+            height: 3.9375rem;
+            grid-area: 1/-1;
+            z-index: 1;
+            background-position: 106%;
+        }
+
+        &__wrapper {
+            padding-left: 6.0625rem;
+        }
+
+        &__title {
+            letter-spacing: -2.5px;
+            line-height: 1;
+            text-align: left;
+        }
+    }
+
+    .sites {
+        &__cities {
+            display: none;
+        }
+
+        &__map {
+            position: relative;
+        }
+
+        &__pin {
+            display: block;
+            //width: 7.5rem;
+            width: auto;
+            font-family: "Space Mono", monospace;
+            font-weight: bold;
+            background-color: #fcb726;
+            color: #495567;
+            font-size: clamp(0.813rem, -0.18rem + 2.07vw, 1.5rem);
+            text-align: center;
+            letter-spacing: -1.07px;
+            border: none;
+            padding: 0.5rem 1.875rem 0.5rem 1.875rem;
+            position: absolute;
+        }
+
+        &__pin::after {
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid $orange;
+            content: " ";
+            bottom: -10px;
+            position: absolute;
+            left: 43%;
+        }
+    }
+    }
+
+    .yokohama {
+        top: 16%;
+        right: 5%;
+    }
+
+    .jakarta {
+        top: 47%;
+        right: 13%;
+    }
+
+    .london {
+        top: 4%;
+        right: 48%;
+    }
+
+    .nyork {
+        top: 14%;
+        right: 68%;
+    }
+     .listing {
+        &__content h2 {
+            max-width: 15ch;
+            letter-spacing: -2.14px;
+        }
+     }
+
+
+@include media-mmd {
+    .features {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+            gap: 1.9rem;
+        }
+
+        &__wrapper::after {
+            display: none;
+        }
+
+        &__wrapper img {
+            align-self: start;
+        }
+
+        &__card {
+            flex-direction: column;
+        }
+    }
+
+    .features__wrapper .features__card:nth-child(2),
+    .features__wrapper .features__card:nth-child(3) {
+        margin-top: 0rem;
+    }
+
+    /* ==== ABOUT STYLES ==== */
+    .accordion {
+        &__container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__wrapper {
+            width: 690px;
+        }
+
+        &__header button:hover {
+            background-color: $lightYellow;
+        }
+
+        &__header button:active {
+            background-color: $accGray;
+        }
+    }
+
+    .faq {
+        &__wrapper {
+            margin-left: unquote("clamp(2rem, -16.89rem + 33.77vw, 8.438rem)");
+            margin-right: unquote("clamp(2rem, -16.89rem + 33.77vw, 8.438rem)");
+        }
+
+        &__subtitle {
+            letter-spacing: -1.79px;
+        }
+    }
 }
 
 @include media-lg {
     .hero__wrapper {
-            background-image: url("../assets/images/home-hero-desktop.jpg");
+        background-image: url("../assets/images/home-hero-desktop.jpg");
+    }
+
+    .highlights {
+        &__wrapper {
+            margin-block-end: 9.4rem;
         }
+        &__col {
+            grid-template-areas: "highlightContent highlightImg";
+            grid-template-columns: 1fr 1fr;
+            text-align: left;
+            //margin-block-end: 10rem;
+            position: relative;
+        }
+
+        &__col.city {
+            grid-template-areas:"highlightImg highlightContent";
+        }
+
+        &__content {
+            margin-right: 0;
+            margin-left: unquote("clamp(6.125rem, -7.33rem + 21.02vw, 8.438rem)");
+        }
+
+        &__content.city {
+            margin-left: 7rem;
+        }
+
+        &__content h2 {
+            margin: 3.5rem 0 2rem 0;
+            width: 90%;
+        }
+
+        &__content p {
+            width: 27.8125rem;
+        }
+
+        &__content .button {
+            left: 0;
+            right: 0;
+            margin: 0;
+        }
+
+        // &__content .btn2 {
+        //     left: 818px;
+        // }
+
+        &__image {
+            margin: 0;
+        }
+    }
+
+    .signup {
+        padding-bottom: 6.4rem;
+        &__wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 6.375rem;
+
+            & h2 {
+                padding: 0;
+                text-align: left;
+                max-width: 15ch;
+                margin: 0;
+            }
+        }
+
+        &__apps {
+            margin: 0;
+            padding-right: 6rem;
+        }
+
+        &__app {
+            max-width: none;
+        }
+    }
+
+    /* ==== ABOUT STYLES ==== */
+    .about {
+        background-image: url("../assets/images/about-hero-desktop.jpg");
+
+        &__highlights-wrapper {
+            padding: 9rem 0 0 0;
+        }
+    }
+
+    .values {
+        &__content {
+            grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+            gap: 1.5rem;
+        }
+    }
+
+    /* ==== CAREER STYLES ==== */
+    .careers {
+        background-image: url("../assets/images/careers-locations-hero-desktop.jpg");
+
+        &__wrapper {
+            padding-left: unquote("clamp(6.063rem, 1.84rem + 8.8vw, 8.438rem)");
+        }
+    }
+
+    /* ==== LOCATION STYLES ==== */
+    .location {
+        background-image: url("../assets/images/careers-locations-hero-desktop.jpg");
+    
+        &__wrapper {
+             padding-left: unquote("clamp(6.063rem, 1.84rem + 8.8vw, 8.438rem)");
+        }
+    }
+
+    .listing {
+        &__content {
+            flex-direction: row;
+            justify-content: unset;
+        & h2 {
+            max-width: 12ch;
+            text-align: left;
+            margin-block-end: 0rem;
+        } 
+        & p {
+            text-align: left;
+            width: 27.8125rem;
+            margin-left: 1.875rem;
+            margin-bottom: 0rem
+        }   
+    }
+
+    &__button {
+        position: absolute;
+        bottom: 30px;
+        right: 0px;
+    }
+
+    // &__button {
+    //     margin: 0 0 0 4.625rem;
+    // }
 }
+
+@include media-mlg {
+    .features {
+        &__wrapper::after {
+            display: inline-flex;
+            height: 14px;
+            width: 971px;
+            top: 32%;
+            left: -134px;
+        }
+    }
+}
+
+@include media-xl {
+    .hero {
+
+        &::before {
+                background-position: 693px 350px;
+            }
+        
+        &::after {
+            background-position: 104% 422px;
+        }
+
+        &__content {
+            padding-top: 9.5625rem;
+        }
+
+        &__content h1 {
+            text-align: left;
+            max-width: 15ch;
+            margin-bottom: 2.5rem;
+            letter-spacing: -2.5px;
+        }
+
+        &__lede {
+            width: 40%;
+            text-align: left;
+            margin-left: 5.9375rem;
+        }
+
+        &__button {
+            justify-self: start;
+            margin: unset;
+            // margin-left: unset;
+            margin-left: 5.9375rem;
+        }
+
+        &__button:hover {
+            background-color: none;
+    
+        }
+    }
+
+    .yellow-line {
+        display:grid;
+        position: relative;
+        top: -142px;
+        top: 197px;
+        grid-area: 1/-1;
+        left: -165px;
+    }
+
+    .features {
+        &__wrapper {
+            padding: 10rem 0 12.5rem 0;
+        }
+    }
+
+    .signup {
+        background-position: 197% bottom;
+    }
+
+    /* ==== ABOUT STYLES ==== */
+    .about {
+        &::after {
+            background-position: 103%;
+        }
+    }
+
+    /* ==== CAREERS STYLES ==== */
+    .careers {
+        &::after {
+            background-position: 103%;
+        }
+    }
+
+    /* ==== LOCATION STYLES ==== */
+    .location {
+        &::after {
+            background-position: 103%;
+        }
+    }
+
+    .sites {
+        &__pin {
+            letter-spacing: -1.071px;
+        }
+
+        &__pin.nyork {
+            padding: 1.375rem 2.46875rem 1.375rem 2.40625rem;
+        }
+
+        &__pin.london {
+            padding: 1.375rem 3.3125rem 1.375rem 3.3125rem;
+        }
+
+        &__pin.yokohama {
+            padding: 1.375rem 2.46875rem 1.375rem 2.40625rem;
+        }
+
+        &__pin.jakarta {
+            padding: 1.375rem 2.875rem 1.375rem 2.875rem;
+        }
+    }
+
+    .nyork {
+        top: 13%;
+        right: 70%;
+    }
+
+    .london {
+        top: 2.5%;
+        right: 46.5%;
+    }
+
+    .yokohama {
+        top: 13%;
+    } 
+    
+    .jakarta {
+        top: 46%;
+        right: 12.7%;
+    }
+}}

@@ -13,28 +13,31 @@
 </head>
 <body>
 <header>
-  <div class="menu__btn">
+  <div class="header__wrapper">
     <span class="hamburger__menu">
       <img src="assets/icons/hamburger.svg" alt="hamburger menu" />
     </span>
 
-    <a href="index.html">
-      <img class="logo" src="assets/logo.svg" alt="website logo" />
-    </a>
-
-    <nav class="nav">
-      <ul class="nav__menu">
-        <li class="nav__item">
-          <a href="about.html">About</a>
-        </li>
-        <li class="nav__item">
-          <a href="locations.html">Location</a>
-        </li>
-        <li class="nav__item">
-          <a href="careers.html">Careers</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="logo-wrapper">
+      <a href="index.html">
+        <img class="logo" src="assets/logo.svg" alt="website logo" />
+      </a>
+      
+      <nav class="nav">
+        <ul class="nav__menu">
+          <li class="nav__item">
+            <a href="about.html">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="locations.html">Location</a>
+          </li>
+          <li class="nav__item">
+            <a href="careers.html">Careers</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    
 
     <button class="nav__button button">Get Scootin</button>
   </div> 
@@ -46,10 +49,10 @@
     <div class="hero__wrapper">
       <div class="hero__content">
         <h1>Scooter sharing made simple</h1>
-        <p>Scoot takes the hassle out of urban mobility. Our bikes are placed in convenient locations in each of our cities. Use our app to locate the nearest bike, unlock it with a tap, and you're away!</p>
+        <p class="hero__lede">Scoot takes the hassle out of urban mobility. Our bikes are placed in convenient locations in each of our cities. Use our app to locate the nearest bike, unlock it with a tap, and you're away!</p>
         <button class="hero__button button">Get Scootin</button>
+        <img src="assets/patterns/line.svg" alt="a yellow line" class="yellow-line" />
       </div>
-      <img src="assets/patterns/line.svg" alt="a yellow line" class="yellow-line" />
       <!-- <img src="assets/patterns/right-arrow.svg" alt="right arrow in the hero section" class="right-arrow" />  -->
       <img src="assets/patterns/white-circles.svg" alt="a row of white circles" class="white-circles" />
     </div>
@@ -57,7 +60,8 @@
   </section>
   <section class="features">
     <div class="features__wrapper">
-      <div class="features__card location">
+      <!-- <div class="features__strip"></div> -->
+      <div class="features__card">
         <img src="assets/icons/locate.svg" alt="icon of a mobile app" />
         <div class="features__content">
           <h3>Locate with app</h3>
@@ -91,7 +95,7 @@
         <div class="highlights__content">
           <h2>Easy to use riding telemetry</h2>
           <p>The Scoot app is available with riding telemetry. This means it can show you your average speed, how long you've been using the scooter, your travelling distance, and many more things all in an easy to use app.</p>
-          <button class="highlights__button button">Learn More</button>
+          <button class="highlights__button button btn">Learn More</button>
         </div>
       </div>
       <div class="highlights__col city">
@@ -103,7 +107,7 @@
         <div class="highlights__content">
           <h2>Coming to a city near you</h2>
           <p>Scoot is available in 4 major cities so far. We're expanding rapidly, so be sure to let us know if you want to see us in your hometown. We're aiming to let our scooters loose on 23 cities over the coming year.</p>
-          <button class="highlights__button button">Learn More</button>
+          <button class="highlights__button button btn2">Learn More</button>
         </div>
       </div>
       <div class="highlights__col payments">
@@ -112,11 +116,11 @@
           <img class="circle circle3" src="assets/patterns/circle.svg" alt="gray circle" /> 
           <img class="lft__dwn-arrow2" src="assets/patterns/left-downward-arrow.svg" alt="left downward arrow" /> 
         </div>
-        <dic class="highlights__content">
+        <div class="highlights__content">
           <h2>Zero hassle payments</h2>
           <p>Our payment is as easy as one two three. We accept most credit cards and debit cards. You can also link your PayPal account inside the app. Need to pay later? No worries! You can defer payment for up to a month.</p>
-          <button class="highlights__button button">Learn More</button>
-        </dic>
+          <button class="highlights__button button btn">Learn More</button>
+        </div>
       </div>
     </div>
   </section>
@@ -125,10 +129,10 @@
       <h2>Sign up and Scoot off today</h2>
       <div class="signup__apps">
         <a href="#">
-          <img src="assets/icons/app-store.svg" alt="image of the app-store" />
+          <img class="signup__app" src="assets/icons/app-store.svg" alt="image of the app-store" />
         </a>
         <a href="#">
-          <img src="assets/icons/google-play.svg" alt="image of the google app"/>
+          <img class="signup__app" src="assets/icons/google-play.svg" alt="image of the google app"/>
         </a>
       </div>
     </div>

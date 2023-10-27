@@ -13,30 +13,34 @@
 </head>
 <body>
 <header>
-  <div class="menu__btn">
+  <div class="header__wrapper">
     <span class="hamburger__menu">
       <img src="assets/icons/hamburger.svg" alt="hamburger menu" />
     </span>
   
-    <a href="index.html">
-      <img class="logo" src="assets/logo.svg" alt="website logo" />
-    </a>
+    <div class="logo-wrapper">
+      <a href="index.html">
+        <img class="logo" src="assets/logo.svg" alt="website logo" />
+      </a>
   
-    <nav class="nav">
-      <ul class="nav__menu">
-        <li class="nav__item">
-          <a href="about.html">About</a>
-        </li>
-        <li class="nav__item">
-          <a href="locations.html">Location</a>
-        </li>
-        <li class="nav__item">
-          <a href="careers.html">Careers</a>
-        </li>
-      </ul>
-    </nav>
+      <nav class="nav">
+        <ul class="nav__menu">
+          <li class="nav__item">
+            <a href="about.html">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="locations.html">Location</a>
+          </li>
+          <li class="nav__item">
+            <a href="careers.html">Careers</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  
   
     <button class="nav__button button">Get Scootin</button>
+  </div>
 </header>
 
 <main class="container">
@@ -62,7 +66,7 @@
           <p>TGetting around should be simple (and even fun!) for everyone. We embrace technology to provide low cost, smart access to scooters at your fingertips.</p>
         </div>
       </div>
-      <div class="highlights__col urban">
+      <div class="highlights__col city">
         <div class="highlights__image">
           <img class="circle circle2" src="assets/patterns/circle.svg" alt="gray circle" />
           <img class="highlights__img" src="assets/images/better-living.jpg" alt="image of a fas moving train" />
@@ -100,7 +104,7 @@
           <span class="values__id">03</span>
           <div class="values__col-content">
             <h3 class="value__title">Our community</h3>
-            <p>We use local workforce with neighbourhood organizations to greatly improve the overall growth and improve urban living.</p>
+            <p>We support every community we serve. All workers are paid a living wage based on their location and are Scoot employees.</p>
           </div>
         </div>
       </div>
@@ -111,7 +115,8 @@
       <h2 class="faq__title">FAQs</h2>
       <div class="accordion__container">
         <h3 class="faq__subtitle">How it works</h3>
-        <div class="accordion">
+        <div class="accordion__wrapper">
+          <div class="accordion">
           <div class="accordion__header">
             <h4>
               <button>
@@ -160,74 +165,78 @@
               able to ride our Scoots.</p>
           </div>
         </div>
+        </div>
       </div>
+        
      
       <!-- Second section of FAQ -->
       <div class="accordion__container">
         <h3 class="faq__subtitle">Safe driving</h3>
-        <div class="accordion">
-          <div class="accordion__header">
-            <h4>
-              <button>
-                <span class="accordion__title">Should I wear a helmet?</span>
-                <div class="accordion__indicator">
-                  <img src="assets/icons/chevron.svg" alt="downward accordion indicator" />
-                </div>
-              </button>
-            </h4>
+        <div class="accordion__wrapper">
+          <div class="accordion">
+            <div class="accordion__header">
+              <h4>
+                <button>
+                  <span class="accordion__title">Should I wear a helmet?</span>
+                  <div class="accordion__indicator">
+                    <img src="assets/icons/chevron.svg" alt="downward accordion indicator" />
+                  </div>
+                </button>
+              </h4>
+            </div>
+            <div class="accordion__content">
+              <p>Yes, please do! All cities have different laws. But we strongly strongly strongly recommend
+                always wearing a helmet regardless of the local laws. We like you and we want you to be as
+                safe as possible while Scooting.</p>
+            </div>
           </div>
-          <div class="accordion__content">
-            <p>Yes, please do! All cities have different laws. But we strongly strongly strongly recommend
-              always wearing a helmet regardless of the local laws. We like you and we want you to be as
-              safe as possible while Scooting.</p>
+          <div class="accordion">
+            <div class="accordion__header">
+              <h4>
+                <button>
+                  <span class="accordion__title">How about the rules & regulations?</span>
+                  <div class="accordion__indicator">
+                    <img src="assets/icons/chevron.svg" alt="downward accordion indicator" />
+                  </div>
+                </button>
+              </h4>
+            </div>
+            <div class="accordion__content">
+              <p>Now is not the time to be a rule breaker. Be sure you're complying with all local laws and
+                regulations. Also, just be a good human being. Be sure not to park your Scoot where it can
+                block access to buildings or get in people's way.</p>
+            </div>
           </div>
-        </div>
-        <div class="accordion">
-          <div class="accordion__header">
-            <h4>
-              <button>
-                <span class="accordion__title">How about the rules & regulations?</span>
-                <div class="accordion__indicator">
-                  <img src="assets/icons/chevron.svg" alt="downward accordion indicator" />
-                </div>
-              </button>
-            </h4>
+          <div class="accordion">
+            <div class="accordion__header">
+              <h4>
+                <button>
+                  <span class="accordion__title">What if I damage my Scoot?</span>
+                  <div class="accordion__indicator">
+                    <img src="assets/icons/chevron.svg" alt="downward accordion indicator" />
+                  </div>
+                </button>
+              </h4>
+            </div>
+            <div class="accordion__content">
+              <p>Be sure to read our terms and conditions carefully. Not the most fun job we know but we make
+                it as clear as possible. There's an option to add insurance for each trip, or you can sign
+                up for annual insurance if you're a regular Scooter.</p>
+            </div>
           </div>
-          <div class="accordion__content">
-            <p>Now is not the time to be a rule breaker. Be sure you're complying with all local laws and
-              regulations. Also, just be a good human being. Be sure not to park your Scoot where it can
-              block access to buildings or get in people's way.</p>
           </div>
-        </div>
-        <div class="accordion">
-          <div class="accordion__header">
-            <h4>
-              <button>
-                <span class="accordion__title">What if I damage my Scoot?</span>
-                <div class="accordion__indicator">
-                  <img src="assets/icons/chevron.svg" alt="downward accordion indicator" />
-                </div>
-              </button>
-            </h4>
           </div>
-          <div class="accordion__content">
-            <p>Be sure to read our terms and conditions carefully. Not the most fun job we know but we make
-              it as clear as possible. There's an option to add insurance for each trip, or you can sign
-              up for annual insurance if you're a regular Scooter.</p>
-          </div>
-        </div>
-        </div>
-      </div>
+        </div>      
   </section>
   <section class="signup">
     <div class="signup__wrapper">
       <h2>Sign up and Scoot off today</h2>
       <div class="signup__apps">
         <a href="#">
-          <img src="assets/icons/app-store.svg" alt="image of the app-store" />
+          <img class="signup__app" src="assets/icons/app-store.svg" alt="image of the app-store" />
         </a>
         <a href="#">
-          <img src="assets/icons/google-play.svg" alt="image of the google app" />
+          <img class="signup__app" src="assets/icons/google-play.svg" alt="image of the google app" />
         </a>
       </div>
     </div>
