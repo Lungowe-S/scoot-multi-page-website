@@ -1,0 +1,106 @@
+---
+layout: 'layouts/base.njk'
+title: Scoot | Careers
+---
+
+  <section class="careers">
+    <div class="careers__wrapper">
+      <div class="careers__title-wrapper">
+        <h1 class="careers__title">Careers</h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="highlights careers__highlights">
+    <div class="highlights__wrapper careers__highlights-wrapper">
+      <div class="highlights__col mission">
+        <div class="highlights__image">
+          <img class="highlights__img" src="/assets/images/join-us.jpg" alt="Man holding a tablet conducting a meeting" />
+          <img class="circle circle1" src="/assets/patterns/circle.svg" alt="gray circe" />
+          <img class="lft__dwn-arrow mission-arrow" src="/assets/patterns/left-downward-arrow.svg" alt="left-downward-arrow" />
+        </div>
+        <div class="highlights__content">
+          <h2>Care to join our mission?</h2>
+          <p>We're always looking for ambitious individuals to help us on our journey. If you're passionate about our mission to provide clean, accessible transport to improve urban living we want to hear from you!</p>
+          <button class="mission__button button">Say Hello</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="values">
+    <div class="values__wrapper">
+      <h2 class="values__title">Why join us?</h2>
+      <div class="values__content">
+        {% for value in collections.values %}
+        <div class="values__col tech">
+          <img src={{ value.data.imageSrc }} alt={{ value.data.alt}} />
+          <span class="values__id">{{ value.data.valueNum }}</span>
+          <div class="values__col-content">
+            <h3 class="value__title">{{ value.data.title }}</h3>
+            <p>{{ value.data.description }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  <section class="vacancies">
+    <div class="vacancies__wrapper">
+      <div class="vacancy">
+        <div class="vacancy__wrapper">
+          <div class="vacancy__position">
+            <h4 class="vacancy__title">General Manager</h4>
+            <p>Jakarta, Indonesia</p>
+          </div>
+          <button class="vacancy__button button">Apply</button>
+        </div>
+      </div>
+      <div class="vacancy">
+        <div class="vacancy__wrapper">
+          <div class="vacancy__position">
+            <h4 class="vacancy__title">UI/UX Designer</h4>
+            <p>Yokohama, Japan</p>
+          </div>
+          <button class="vacancy__button button">Apply</button>
+        </div>
+      </div>
+      <div class="vacancy">
+        <div class="vacancy__wrapper">
+          <div class="vacancy__position">
+            <h4 class="vacancy__title">Blog Content Copywriter</h4>
+            <p>New York, United States</p>
+          </div>
+          <button class="vacancy__button button">Apply</button>
+        </div>
+      </div>
+      <div class="vacancy">
+        <div class="vacancy__wrapper">
+          <div class="vacancy__position">
+            <h4 class="vacancy__title">Graphic Designer</h4>
+            <p>New York, United States</p>
+          </div>
+          <button class="vacancy__button button">Apply</button>
+        </div>
+      </div>
+      <div class="vacancy">
+        <div class="vacancy__wrapper">
+          <div class="vacancy__position">
+            <h4 class="vacancy__title">Fleet Supervisor</h4>
+            <p>Jakarta, Indonesia</p>
+          </div>
+          <button class="vacancy__button button">Apply</button>
+        </div>
+      </div>
+      <div class="vacancy">
+        <div class="vacancy__wrapper">
+          <div class="vacancy__position">
+            <h4 class="vacancy__title">UX Analyst</h4>
+            <p>London, United Kingdom</p>
+          </div>
+          <button class="vacancy__button button">Apply</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  

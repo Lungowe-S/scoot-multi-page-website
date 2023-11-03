@@ -1,0 +1,95 @@
+$orange: #fcb72b;
+$lightGray: #939caa;
+$darkBlue: #333a44;
+$white: #fff;
+$blueGray: #495567;
+$black: #000;
+$lightBlue: #e5ecfa;
+$offBlack: #333a44;
+$accGray: #f2f5f9;
+$lightYellow: #FFF4DF;
+
+.button {
+    width: 11.25rem;
+    //width: auto;
+    margin: auto;
+    font-family: "Space Mono", monospace;
+    font-weight: bold;
+    border: none;
+    font-size: 0.9375rem;
+    padding: 0.875rem 2.4375rem;
+    background-color: $orange;
+    color: $white;
+}
+
+.button:hover {
+    background-color: $white;
+    color: $orange;
+    border: 2px solid $orange;
+}
+
+@mixin gridCenter {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin gridColumn {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexRow {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flexBtwn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin media-sm {
+    @media screen and (min-width: 600px) {
+        @content;
+    }
+}
+
+@mixin media-md {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+@mixin media-mmd {
+    @media screen and (min-width: 895px) {
+        @content;
+    }
+}
+
+
+@mixin media-lg {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin media-mlg {
+    @media screen and (min-width: 1121px) {
+        @content;
+    }
+}
+
+@mixin media-xl {
+    @media screen and (min-width: 1300px) {
+        @content;
+    }
+}

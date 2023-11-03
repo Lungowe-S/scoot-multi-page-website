@@ -1,0 +1,201 @@
+.nav__button {
+  display: none;
+}
+
+.hero {
+  display: grid;
+  height: 40.625rem;
+  grid-area: 1 / -1;
+  background-image: url("../assets/images/home-hero-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__wrapper,
+  &__img {
+    grid-area: 1 / -1
+  }
+
+  &__button.button {
+    z-index: 1;
+    width: auto;
+  }
+
+  &__button:hover {
+    background-color: transparent;
+  }
+
+
+
+  // &__img {
+  //   object-fit: cover;
+  //   width: 100%;
+  //   height: 100%;
+  //   min-height: 0;
+  // }
+
+  &::before {
+    content: "";
+    background-image: url("../assets/patterns/right-arrow.svg");
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    grid-area: 1 / -1;
+    z-index: 1;
+    background-position: -306px 468px;
+  }
+
+  &__content {
+    display: grid;
+    //margin: 0 2rem;
+    margin-left: unquote("clamp(2rem, 8vw, 6.125rem)");
+    margin-right: unquote("clamp(2rem, 8vw, 6.125rem)");
+    justify-content: center;
+    align-items: center;
+    padding-top: 7.1875rem;
+    text-align: center;
+    color: $white;
+  
+      h1 {
+      font-family: 'Space Mono', monospace;
+      font-size: unquote("clamp(2.5rem, 5vw + 1rem, 3.5rem)");
+      line-height: 1;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+    }
+ }
+
+    &__lede {
+        font-size: 0.9375rem;
+        line-height: 1.74;
+        margin-bottom: 2.125rem;
+    }
+}
+
+ .yellow-line,
+ .white-circles,
+ .circle {
+   display: none;
+ }
+
+
+.features {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 7.5rem 0;
+    margin-left: unquote("clamp(2rem, -0.926rem + 12.48vw, 8.438rem)");
+    margin-right: unquote("clamp(2rem, -0.926rem + 12.48vw, 8.438rem)");
+    
+      & img {
+        display: inline-block;
+        width: 3.5rem;
+        margin-bottom: 1.5rem;
+      }
+    
+      & h3 {
+        font-size: unquote("clamp(1.25rem, 1.06vw + 1rem, 1.5rem)");
+        font-weight: bold;
+        line-height: 1.4;
+        color: $blueGray;
+        letter-spacing: -0.89px;
+      }
+    
+      & p {
+        font-size: 0.9375rem;
+        line-height: 1.5625rem;
+        margin-top: 1.5rem;
+        color: $lightGray;
+      }
+
+      & .features__card:nth-child(2),
+      & .features__card:nth-child(3) {
+        margin-top: 3rem;
+      }
+  }
+
+  // &__card:nth-child(2),
+  // &__card:nth-child(3) {
+  //   margin-top: 3rem;
+  // }
+}
+
+.highlights {
+  &__wrapper {
+    display: grid;
+    grid-gap: 11.5rem;
+    margin-block-end: 9.4rem;
+  }
+
+  &__col {
+    display: grid;
+    grid-template-areas:
+      "highlightImg  "
+      "highlightContent";
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__image {
+    @include flex;
+    grid-area: highlightImg;
+    position: relative;
+    margin: 0 2rem;
+  }
+
+  &__img {
+    border-radius: 50%;
+  }
+
+  &__content {
+    margin-left: unquote("clamp(2rem, -1.916rem + 16.75vw, 6.125rem)");
+    margin-right: unquote("clamp(2rem, -1.916rem + 16.75vw, 6.125rem)");
+    position: relative;
+    
+    & h2 {
+        color: $blueGray;
+        font-size: unquote("clamp(2rem, 4.2vw + 1rem, 3rem)");
+        letter-spacing: -1.43px;
+        line-height: 1;
+        margin: 3.5rem 0 2rem 0;
+      }
+    
+      & p {
+        font-size: 0.9375rem;
+        line-height: 1.73;
+        color: $lightGray;
+        margin-bottom: 2rem;
+      }
+    
+      & button {
+        // margin-bottom: 7.5rem;
+        position: absolute;
+        left: 50px;
+        right: 50px;
+      }
+  }
+}
+
+.lft__dwn-arrow {
+  max-width: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.rght__rght-arrow {
+  max-width: none;
+  position: absolute;
+  right: 0;
+  top: -8px;
+  left: -191px;
+}
+
+.lft__dwn-arrow2 {
+  max-width: none;
+  position: absolute;
+  top: 0;
+  right: -554px;
+}
+
