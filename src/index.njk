@@ -19,28 +19,15 @@ title: Frontend Mentor | Scoot
   </section>
   <section class="features">
     <div class="features__wrapper">
-      <!-- <div class="features__strip"></div> -->
+    {% for feature in collections.features %}
       <div class="features__card">
-        <img src="assets/icons/locate.svg" alt="icon of a mobile app" />
+        <img src={{ feature.data.imageSrc }} alt={{ feature.data.alt }} />
         <div class="features__content">
-          <h3>Locate with app</h3>
-          <p>Use the app to find the nearest scooter to you. We are continuously placing scooters in the areas with the most demand, so one should never be too far away.</p>
+          <h3>{{ feature.data.title }}</h3>
+          <p>{{ feature.data.description }}</p>
         </div>
       </div>
-      <div class="features__card scooter">
-        <img src="assets/icons/scooter.svg" alt="icon of a scooter" />
-        <div class="features__content">
-          <h3>Pick your scooter</h3>
-          <p>We show the most important info for the scooters closest to you. So you know how much charge they have left and can see roughly how much it will cost.</p>
-        </div> 
-      </div>
-      <div class="features__card scooter-ride">
-        <img src="assets/icons/ride.svg" alt="icon of a person enjoying a scooter ride" />
-        <div class="features__content">
-          <h3>Enjoy the ride</h3>
-          <p>Scan the QR code and the bike will unlock. Retract the cable lock, put on a helmet, and you're off! Always lock bikes away from walkways and accessibility ramps.</p>
-        </div>
-      </div>
+    {% endfor %}
     </div>
   </section>
   <section class="highlights">

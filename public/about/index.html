@@ -20,29 +20,30 @@
     </span>
 
     <div class="logo-wrapper">
-      <a href="/index.html">
+      <a class="logo__link" href="/index.html">
         <img class="logo" src="/assets/logo.svg" alt="website logo" />
       </a>
       
       <nav class="nav">
         <ul class="nav__menu">
           <li class="nav__item">
-            <a href="/about/">About</a>
+            <a href="/about/" class="list__item active">About</a>
           </li>
           <li class="nav__item">
-            <a href="/locations/">Location</a>
+            <a href="/locations/" class="list__item ">Location</a>
           </li>
           <li class="nav__item">
-            <a href="/careers/">Careers</a>
+            <a href="/careers/" class="list__item ">Careers</a>
           </li>
         </ul>
       </nav>
     </div>
     
-
-    <button class="nav__button button">Get Scootin</button>
+<a class="button__link" href="#get-scooting" tabindex="-1">
+  <button class="nav__button button">Get Scootin</button>
+</a>
   </div> 
-</header>
+</header
     <main class="container">
     
   <section class="about">
@@ -233,14 +234,12 @@
           </div>
         </div>      
   </section>
- 
 
-<script src="js/about.js"></script>
 
     <section class="signup">
     <div class="signup__wrapper">
       <h2>Sign up and Scoot off today</h2>
-      <div class="signup__apps">
+      <div class="signup__apps" id="get-scooting">
         <a href="#">
           <img class="signup__app" src="/assets/icons/app-store.svg" alt="image of the app-store" />
         </a>
@@ -255,7 +254,7 @@
     <footer class="footer">
   <div class="footer__wrapper">
     <div class="footer__nav">
-      <a href="/index/">
+      <a class="footer__logo-link" href="/index/">
         <img class="footer__logo" src="/assets/logo.svg" alt="Scoot logo" />
       </a>
       <ul class="footer__menu">
@@ -283,5 +282,6 @@
     </div>
   </div>
 </footer> 
+    <script src="/js/about.js"></script>
 </body>
 </html>

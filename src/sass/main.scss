@@ -54,6 +54,11 @@ a {
     width: 16.026875rem;
     margin: 0 auto;
   }
+
+  &__apps a:focus {
+    outline: 3px dashed $orange;
+    outline-offset: 5px;
+  }
 }
 
 .footer {
@@ -67,6 +72,7 @@ a {
 
   &__social {
     @include flex;
+    gap: 1.5rem;
   }
 
   &__logo {
@@ -95,12 +101,17 @@ a {
   }
 
   &__social {
-    & a+a {
-        padding-left: 1.5rem;
-      }
+    // & a+a {
+    //     padding-left: 1.5rem;
+    //   }
     & a:hover {
       filter: invert(0.5) sepia(100%) saturate(0%) hue-rotate(900deg) brightness(122%) contrast(101%);
     }  
+
+    & a:focus{
+      outline: 3px dashed $orange;
+      outline-offset: 5px;
+    }
   }
 }
 @import "responsive";

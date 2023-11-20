@@ -5,26 +5,27 @@
     </span>
 
     <div class="logo-wrapper">
-      <a href="/index.html">
+      <a class="logo__link" href="/index.html">
         <img class="logo" src="/assets/logo.svg" alt="website logo" />
       </a>
       
       <nav class="nav">
         <ul class="nav__menu">
           <li class="nav__item">
-            <a href="/about/">About</a>
+            <a href="/about/" class="list__item {{ 'active' if '/about/' in page.url }}">About</a>
           </li>
           <li class="nav__item">
-            <a href="/locations/">Location</a>
+            <a href="/locations/" class="list__item {{ 'active' if '/locations/' in page.url }}">Location</a>
           </li>
           <li class="nav__item">
-            <a href="/careers/">Careers</a>
+            <a href="/careers/" class="list__item {{ 'active' if '/careers/' in page.url }}">Careers</a>
           </li>
         </ul>
       </nav>
     </div>
     
-
-    <button class="nav__button button">Get Scootin</button>
+<a class="button__link" href="#get-scooting" tabindex="-1">
+  <button class="nav__button button">Get Scootin</button>
+</a>
   </div> 
-</header>
+</header

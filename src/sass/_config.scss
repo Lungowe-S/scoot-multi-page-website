@@ -20,6 +20,10 @@ $lightYellow: #FFF4DF;
     padding: 0.875rem 2.4375rem;
     background-color: $orange;
     color: $white;
+
+    & a {
+        color: inherit;
+    }
 }
 
 .button:hover {
@@ -27,6 +31,14 @@ $lightYellow: #FFF4DF;
     color: $orange;
     border: 2px solid $orange;
 }
+
+.button:focus {
+    outline: 3px dashed $orange;
+    outline-offset: 3px;
+}
+
+
+
 
 @mixin gridCenter {
     display: grid;

@@ -24,6 +24,11 @@
     height: 1.25rem;
 }
 
+// .logo__link:focus {
+//     outline: 3px dashed $orange;
+//     outline-offset: 3px;
+// }
+
 .nav {
     display: none;
 }
@@ -31,4 +36,16 @@
 .nav__menu {
     font-family: "Space Mono", monospace;
     font-weight: bold;
+}
+
+.nav__item a:focus,
+.footer__menu li a:focus,
+.logo__link:focus,
+.footer__logo-link:focus {
+    outline: 3px dashed $orange;
+    outline-offset: 3px;
+}
+
+.nav__item .list__item.active {
+    color: $orange;
 }

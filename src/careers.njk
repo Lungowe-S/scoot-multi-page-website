@@ -46,60 +46,17 @@ title: Scoot | Careers
   </section>
   <section class="vacancies">
     <div class="vacancies__wrapper">
+    {% for vacancy in collections.vacancies %}
       <div class="vacancy">
         <div class="vacancy__wrapper">
           <div class="vacancy__position">
-            <h4 class="vacancy__title">General Manager</h4>
-            <p>Jakarta, Indonesia</p>
+            <h4 class="vacancy__title">{{ vacancy.data.title }} </h4>
+            <p>{{ vacancy.data.location }}</p>
           </div>
-          <button class="vacancy__button button">Apply</button>
+          <button class="vacancy__button button">{{ vacancy.data.textButton }}</button>
         </div>
       </div>
-      <div class="vacancy">
-        <div class="vacancy__wrapper">
-          <div class="vacancy__position">
-            <h4 class="vacancy__title">UI/UX Designer</h4>
-            <p>Yokohama, Japan</p>
-          </div>
-          <button class="vacancy__button button">Apply</button>
-        </div>
-      </div>
-      <div class="vacancy">
-        <div class="vacancy__wrapper">
-          <div class="vacancy__position">
-            <h4 class="vacancy__title">Blog Content Copywriter</h4>
-            <p>New York, United States</p>
-          </div>
-          <button class="vacancy__button button">Apply</button>
-        </div>
-      </div>
-      <div class="vacancy">
-        <div class="vacancy__wrapper">
-          <div class="vacancy__position">
-            <h4 class="vacancy__title">Graphic Designer</h4>
-            <p>New York, United States</p>
-          </div>
-          <button class="vacancy__button button">Apply</button>
-        </div>
-      </div>
-      <div class="vacancy">
-        <div class="vacancy__wrapper">
-          <div class="vacancy__position">
-            <h4 class="vacancy__title">Fleet Supervisor</h4>
-            <p>Jakarta, Indonesia</p>
-          </div>
-          <button class="vacancy__button button">Apply</button>
-        </div>
-      </div>
-      <div class="vacancy">
-        <div class="vacancy__wrapper">
-          <div class="vacancy__position">
-            <h4 class="vacancy__title">UX Analyst</h4>
-            <p>London, United Kingdom</p>
-          </div>
-          <button class="vacancy__button button">Apply</button>
-        </div>
-      </div>
+    {% endfor %}
     </div>
   </section>
 

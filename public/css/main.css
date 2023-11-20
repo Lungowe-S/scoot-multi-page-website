@@ -84,11 +84,19 @@ select {
   background-color: #fcb72b;
   color: #fff;
 }
+.button a {
+  color: inherit;
+}
 
 .button:hover {
   background-color: #fff;
   color: #fcb72b;
   border: 2px solid #fcb72b;
+}
+
+.button:focus {
+  outline: 3px dashed #fcb72b;
+  outline-offset: 3px;
 }
 
 .nav__button {
@@ -281,6 +289,18 @@ select {
 .nav__menu {
   font-family: "Space Mono", monospace;
   font-weight: bold;
+}
+
+.nav__item a:focus,
+.footer__menu li a:focus,
+.logo__link:focus,
+.footer__logo-link:focus {
+  outline: 3px dashed #fcb72b;
+  outline-offset: 3px;
+}
+
+.nav__item .list__item.active {
+  color: #fcb72b;
 }
 
 .about {
@@ -642,6 +662,10 @@ a {
   width: 16.026875rem;
   margin: 0 auto;
 }
+.signup__apps a:focus {
+  outline: 3px dashed #fcb72b;
+  outline-offset: 5px;
+}
 
 .footer {
   background-color: #333a44;
@@ -657,6 +681,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1.5rem;
 }
 .footer__logo {
   filter: invert(350%) sepia(100%) saturate(0%) hue-rotate(360deg) brightness(122%) contrast(101%);
@@ -676,11 +701,12 @@ a {
 .footer__nav a:hover {
   color: #fcb72b;
 }
-.footer__social a + a {
-  padding-left: 1.5rem;
-}
 .footer__social a:hover {
   filter: invert(0.5) sepia(100%) saturate(0%) hue-rotate(900deg) brightness(122%) contrast(101%);
+}
+.footer__social a:focus {
+  outline: 3px dashed #fcb72b;
+  outline-offset: 5px;
 }
 
 @media screen and (min-width: 600px) {
@@ -801,6 +827,7 @@ a {
     position: absolute;
     right: 0;
     width: auto;
+    top: 11px;
   }
   .hero__content {
     margin-left: clamp(6.125rem, 2.014rem + 8.56vw, 8.438rem);
