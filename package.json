@@ -7,7 +7,7 @@
     "watch:sass": "sass --watch src/sass:public/css",
     "build:sass": "sass src/sass:public/css",
     "watch:eleventy": "eleventy --serve",
-    "build:eleventy": "eleventy",
+    "build:eleventy": "eleventy --output public",
     "start": "npm-run-all build:sass --parallel watch:*",
     "build": "npm-run-all build:*"
   },
