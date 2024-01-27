@@ -10,18 +10,7 @@
 
     &__wrapper {
         grid-area: 1/-1;
-        // background-image: url("../assets/images/careers-location-hero-mobile.jpg");
-        // background-repeat: no-repeat;
-        // background-size: 100%;
-        // padding-bottom: 10rem;
-        // position: relative
     }
-
-    // &__title-wrapper {
-    //     position: absolute;
-    //     top: 35%;
-    //     left: 28%;
-    // }
 
     &__title {
         text-align: center;
@@ -42,14 +31,11 @@
     &__wrapper {
         margin-left: unquote("clamp(2rem, -0.926rem + 12.48vw, 8.438rem)");
         margin-right: unquote("clamp(2rem, -0.926rem + 12.48vw, 8.438rem)");
-        //display: grid;
         text-align: center;
-        //justify-content: center;
     }
 }
 
 .vacancy {
-    //border: 1px solid black;
     background-color: #f2f5f9;
     margin-block-end: 1rem;
 
@@ -85,7 +71,6 @@
     }
 
     &__button {
-        //width: 329px;
         position: absolute;
         right: 10.2%;
         width: 79.5%;

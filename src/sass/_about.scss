@@ -12,12 +12,6 @@
         grid-area: 1/-1;
     }
 
-    // &__title-wrapper {
-    //     position: absolute;
-    //     top: 30%;
-    //     left: 35%;
-    // }
-
     &__title {
         text-align: center;
         font-size: unquote("clamp(2.5rem, 1.546rem + 4.07vw, 3.5rem)");
@@ -76,9 +70,6 @@
             font-size: 0.9375rem;
             color: $lightGray;
             line-height: 1.67;
-            //margin-block-start: 1.6875rem;
-            // width: 80%;
-            // margin: auto
         }
     }
 
@@ -94,10 +85,6 @@
         border-radius: 50%;
         background-color: $orange;
     }
-
-    // &__col + &__col {
-    //     margin-top: 3.5rem;
-    // }
 }
 
 .values__title,
@@ -150,10 +137,6 @@
     + .accordion {
         margin-block-start: 1rem;
     }
-
-    // &__container {
-    //     margin-top: 3rem;
-    // }
 
     &__title {
         color: $blueGray;

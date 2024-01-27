@@ -16,6 +16,15 @@
             &__menu {
                 display: flex;
                 font-size: 0.9375rem;
+                gap: 0;
+                position: unset;
+                width: unset;
+                height: unset;
+                background-color: unset;
+                z-index: unset;
+                flex-direction: unset;
+                padding-top: unset;
+                padding-left: unset;
             }
     
             &__item {
@@ -39,6 +48,10 @@
 
     .logo {
         height: 1.785rem;
+
+        &-wrapper {
+            order: unset;
+        }
     }
 
     .hero {
@@ -126,7 +139,7 @@
     /* ==== HOME STYLES ==== */
     .logo-wrapper {
         width: auto;
-        gap: 3.63625rem;
+        margin-right: 3.63625rem;
     }
 
     .header__wrapper {
@@ -143,11 +156,19 @@
         }  
     }
 
+    .header__first {
+        margin-right: auto;
+    }
+
     .nav__button.button {
         position: absolute;
         right: 0;
-        width: auto;
         top: 11px;
+    }
+
+    .nav__button.active {
+        z-index: unset;
+        left: unset;
     }
 
     .hero {
@@ -212,15 +233,6 @@
         &__wrapper h3 {
             letter-spacing: -1.07px;
         }
-
-        // &__wrapper p {
-        //     width: 25rem;
-        // }
-      
-        // &__wrapper img::before {
-        //     background-image: url("../assets/patterns/line.svg");
-        //      content: "";
-        // }
 
         &__line {
             position: absolute;
@@ -365,10 +377,6 @@
             padding: 1rem 2.4375rem;
             right: 5.5%;
         }
-
-        // &__button.button {
-        //     padding: 1rem 2.4375rem;
-        // }
     }
 
     /* ==== LOCATION STYLES ==== */
@@ -407,7 +415,6 @@
 
         &__pin {
             display: block;
-            //width: 7.5rem;
             width: auto;
             font-family: "Space Mono", monospace;
             font-weight: bold;
@@ -532,7 +539,6 @@
             grid-template-areas: "highlightContent highlightImg";
             grid-template-columns: 1fr 1fr;
             text-align: left;
-            //margin-block-end: 10rem;
             position: relative;
         }
 
@@ -563,10 +569,6 @@
             right: 0;
             margin: 0;
         }
-
-        // &__content .btn2 {
-        //     left: 818px;
-        // }
 
         &__image {
             margin: 0;
@@ -655,10 +657,6 @@
         bottom: 30px;
         right: 0px;
     }
-
-    // &__button {
-    //     margin: 0 0 0 4.625rem;
-    // }
 }
 
 @include media-mlg {
@@ -704,7 +702,6 @@
         &__button {
             justify-self: start;
             margin: unset;
-            // margin-left: unset;
             margin-left: 5.9375rem;
         }
 
