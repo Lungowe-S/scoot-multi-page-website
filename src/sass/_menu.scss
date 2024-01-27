@@ -1,0 +1,87 @@
+.header__wrapper {
+    display: flex;
+    align-items: center;
+    padding-top: 1.1rem;
+    padding-bottom: 1.1rem;
+    margin: 0 2rem;
+    justify-content: space-between;
+    position: relative;
+
+    & a {
+        margin: 0 auto;
+    }   
+}
+
+.logo-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    order: 2;
+}
+
+.logo {
+    height: 1.25rem;
+}
+
+.nav {
+    display: block;
+
+     &__item a {
+        color: $lightGray;
+    }
+    
+    &__item a:hover {
+        color: $orange;
+    }
+}
+
+.nav__menu.nav__open {
+    display: flex;
+    flex-direction: column;
+    padding-top: 4rem;
+    padding-left: 2rem;
+}
+
+.nav__button.active {
+    display: flex;
+    top: 627px;
+    z-index: 2;
+    left: 0;
+}
+
+.nav__menu {
+    font-family: "Space Mono", monospace;
+    font-weight: bold;
+    display: none;
+    
+    gap: 1.5rem;
+    line-height: 1.389;
+    font-size: 1.125rem;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: -32px;
+    width: 16rem;
+    height: 71.6vh;
+    background-color: $offBlack;
+    z-index: 2
+}
+
+
+.nav__item a:focus,
+.footer__menu li a:focus,
+.logo__link:focus,
+.footer__logo-link:focus {
+    outline: 3px dashed $orange;
+    outline-offset: 3px;
+}
+
+.nav__item .list__item.active,
+.footer__item .list__item.active {
+    color: $orange;
+}
+
+.hamburger__menu {
+    cursor: pointer;
+}

@@ -1,0 +1,33 @@
+{
+  "name": "scoot-multi-page-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "sass --watch src/sass:public/css",
+    "build:sass": "sass src/sass:public/css",
+    "watch:eleventy": "eleventy --serve",
+    "build:eleventy": "eleventy",
+    "start": "npm-run-all build:sass --parallel watch:*",
+    "build": "npm-run-all build:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lungowe-S/scoot-multi-page-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lungowe-S/scoot-multi-page-website/issues"
+  },
+  "homepage": "https://github.com/Lungowe-S/scoot-multi-page-website#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "node-sass": "^9.0.0",
+    "npm-run-all": "^4.1.5"
+  },
+  "dependencies": {
+    "sass": "^1.69.5"
+  }
+}

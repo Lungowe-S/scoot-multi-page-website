@@ -1,0 +1,115 @@
+@import "reset";
+@import "config";
+@import "home";
+@import "menu";
+@import "about";
+@import "careers";
+@import "location";
+
+
+body {
+  font-size: 1.25rem;
+  font-family: "Lexend Deca", sans-serif;
+  line-height: 1.4;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Space Mono", monospace;
+}
+
+h1 {
+  color: $white;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.signup {
+  background-color: $blueGray;
+  background-image: url("../assets/patterns/semi-circles.svg");
+  background-repeat: no-repeat;
+  background-position: -596px bottom;
+
+  &__wrapper {
+    margin-left: unquote("clamp(2rem, -0.926rem + 12.48vw, 8.438rem)");
+    margin-right: unquote("clamp(2rem, -0.926rem + 12.48vw, 8.438rem)");
+    padding-bottom: 5.5rem;
+      & h2 {
+        text-align: center;
+        color: $white;
+        font-size: unquote("clamp(2rem, 1.051rem + 4.06vw, 3rem)");
+        padding-top: 5.5rem;
+        letter-spacing: -1.43px;
+        line-height: 1;
+        padding-bottom: 2.5rem;
+      }
+  }
+
+  &__apps {
+    @include flex;
+    column-gap: 0.80375rem;
+    width: 16.026875rem;
+    margin: 0 auto;
+  }
+
+  &__apps a:focus {
+    outline: 3px dashed $orange;
+    outline-offset: 5px;
+  }
+}
+
+.footer {
+  background-color: $offBlack;
+
+  &__wrapper {
+    @include gridColumn;
+    text-align: center;
+    padding: 4rem 0 5.5rem 0;
+  }
+
+  &__social {
+    @include flex;
+    gap: 1.5rem;
+  }
+
+  &__logo {
+    filter: invert(350%) sepia(100%) saturate(0%) hue-rotate(360deg) brightness(122%) contrast(101%);
+  }
+
+  &__nav {
+    & ul {
+        margin: 2.59rem 0 5.3125rem 0;
+        font-family: "Space Mono", monospace;
+        font-size: 0.9375rem;
+        font-weight: bold;
+    
+        & li+li {
+          padding-top: 1rem;
+        }
+      }
+    
+      & a {
+        color: $lightGray;
+      }
+  }
+
+  &__nav a:hover {
+    color: $orange;
+  }
+
+  &__social {
+    & a:hover {
+      filter: invert(0.5) sepia(100%) saturate(0%) hue-rotate(900deg) brightness(122%) contrast(101%);
+    }  
+
+    & a:focus{
+      outline: 3px dashed $orange;
+      outline-offset: 5px;
+    }
+  }
+}
+@import "responsive";
+

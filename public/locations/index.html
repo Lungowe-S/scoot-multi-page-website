@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css" />
+  
+  <title>Scoot | Locations</title>
+</head>
+
+<body>
+    <header>
+  <div class="header__wrapper">
+    <div class="logo-wrapper">
+      <a class="logo__link" href="/index.html">
+        <img class="logo" src="/assets/logo.svg" alt="website logo" />
+      </a>
+    </div>
+    <div class="header__first">
+      <nav class="nav">
+       <span class="hamburger__menu">
+        <img class="icon" src="/assets/icons/hamburger.svg" alt="hamburger menu" />
+      </span>
+        <ul class="nav__menu">
+          <li class="nav__item">
+            <a href="/about/" class="list__item ">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="/locations/" class="list__item active">Location</a>
+          </li>
+          <li class="nav__item">
+            <a href="/careers/" class="list__item ">Careers</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    
+    <a class="button__link" href="#get-scooting" tabindex="-1">
+      <button class="nav__button button">Get Scootin</button>
+    </a>
+  </div> 
+</header
+    <main class="container">
+        <section class="location">
+      <div class="location__wrapper">
+        <div class="location__title-wrapper">
+          <h1 class="location__title">Locations</h1>
+          <img class="white-circles" src="/assets/patterns/white-circles.svg" alt="white-circles" />
+        </div>
+      </div>
+    </section>
+    <section class="sites">
+      <div class="sites__wrapper">
+        <div class="sites__map">
+          <picture>
+            <source class="sites__desk sites-img" srcset="/assets/images/world-map-desktop.png" media="(min-width: 56.25rem)">
+            <source class="sites__tablet sites-img" srcset="/assets/images/world-map-tablet.png" media="(min-width: 48rem)">
+            <img class="sites__mobile sites-img" src="/assets/images/world-map-mobile.png" alt="image of the world map with selected cities" />
+          </picture>
+          <div class="sites__pin nyork">
+            <span>New York</span>
+          </div>
+          <div class="sites__pin london">
+            <span>London</span>
+          </div>
+          <div class="sites__pin jakarta">
+            <span>Jakarta</span>
+          </div>
+          <div class="sites__pin yokohama">
+            <span>Yokohama</span>
+          </div>
+        </div>
+        <div class="sites__cities">
+          <button class="sites__city">New York</button>
+          <button class="sites__city">London</button>
+          <button class="sites__city">Jakarta</button>
+          <button class="sites__city">Yokohama</button>
+        </div>
+      </div>
+    </section>
+    <section class="listing">
+      <div class="listing__content">
+        <h2>Your City Not listed?</h2>
+        <p>If you'd like to see Scoot in your hometown, be sure to let us know. We track requests and plan launches based on demand. Feel free to message us by clicking the link or messaging us on social.</p>
+        <button class="listing__button button">Message Us</button>
+      </div>
+    </section>
+    
+    <section class="signup">
+    <div class="signup__wrapper">
+      <h2>Sign up and Scoot off today</h2>
+      <div class="signup__apps" id="get-scooting">
+        <a href="#">
+          <img class="signup__app" src="/assets/icons/app-store.svg" alt="image of the app-store" />
+        </a>
+        <a href="#">
+          <img class="signup__app" src="/assets/icons/google-play.svg" alt="image of the google app"/>
+        </a>
+      </div>
+    </div>
+  </section>
+
+    </main>
+    <footer class="footer">
+  <div class="footer__wrapper">
+    <div class="footer__nav">
+      <a class="footer__logo-link" href="/index/">
+        <img class="footer__logo" src="/assets/logo.svg" alt="Scoot logo" />
+      </a>
+      <ul class="footer__menu">
+        <li class="footer__item">
+          <a href="/about/" class="list__item ">About</a>
+        </li>
+        <li class="footer__item">
+          <a href="/locations/" class="list__item active">Location</a>
+        </li>
+        <li class="footer__item">
+          <a href="/careers/"  class="list__item ">Careers</a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__social">
+      <a href="#">
+        <img src="/assets/icons/facebook.svg" alt="facebook icon" />
+      </a>
+      <a href="#">
+        <img src="/assets/icons/twitter.svg" alt="twitter icon" />
+      </a>
+      <a href="#">
+        <img src="/assets/icons/instagram.svg" alt="instagram icon" />
+      </a>
+    </div>
+  </div>
+</footer> 
+    <script src="/js/about.js"></script>
+</body>
+</html>

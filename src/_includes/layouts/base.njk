@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css" />
+  
+  <title>{{ title }}</title>
+</head>
+
+<body>
+    {% include "components/navbar.njk" %}
+    <main class="container">
+    {{ content | safe }}
+    {% include "components/signup.njk" %}
+    </main>
+    {% include "components/footer.njk" %}
+    <script src="/js/about.js"></script>
+</body>
+</html>

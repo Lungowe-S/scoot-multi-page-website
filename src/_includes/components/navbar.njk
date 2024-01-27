@@ -1,0 +1,31 @@
+<header>
+  <div class="header__wrapper">
+    <div class="logo-wrapper">
+      <a class="logo__link" href="/index.html">
+        <img class="logo" src="/assets/logo.svg" alt="website logo" />
+      </a>
+    </div>
+    <div class="header__first">
+      <nav class="nav">
+       <span class="hamburger__menu">
+        <img class="icon" src="/assets/icons/hamburger.svg" alt="hamburger menu" />
+      </span>
+        <ul class="nav__menu">
+          <li class="nav__item">
+            <a href="/about/" class="list__item {{ 'active' if '/about/' in page.url }}">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="/locations/" class="list__item {{ 'active' if '/locations/' in page.url }}">Location</a>
+          </li>
+          <li class="nav__item">
+            <a href="/careers/" class="list__item {{ 'active' if '/careers/' in page.url }}">Careers</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    
+    <a class="button__link" href="#get-scooting" tabindex="-1">
+      <button class="nav__button button">Get Scootin</button>
+    </a>
+  </div> 
+</header

@@ -1,0 +1,49 @@
+---
+layout: 'layouts/base.njk'
+title: Scoot | Locations
+---
+    <section class="location">
+      <div class="location__wrapper">
+        <div class="location__title-wrapper">
+          <h1 class="location__title">Locations</h1>
+          <img class="white-circles" src="/assets/patterns/white-circles.svg" alt="white-circles" />
+        </div>
+      </div>
+    </section>
+    <section class="sites">
+      <div class="sites__wrapper">
+        <div class="sites__map">
+          <picture>
+            <source class="sites__desk sites-img" srcset="/assets/images/world-map-desktop.png" media="(min-width: 56.25rem)">
+            <source class="sites__tablet sites-img" srcset="/assets/images/world-map-tablet.png" media="(min-width: 48rem)">
+            <img class="sites__mobile sites-img" src="/assets/images/world-map-mobile.png" alt="image of the world map with selected cities" />
+          </picture>
+          <div class="sites__pin nyork">
+            <span>New York</span>
+          </div>
+          <div class="sites__pin london">
+            <span>London</span>
+          </div>
+          <div class="sites__pin jakarta">
+            <span>Jakarta</span>
+          </div>
+          <div class="sites__pin yokohama">
+            <span>Yokohama</span>
+          </div>
+        </div>
+        <div class="sites__cities">
+          <button class="sites__city">New York</button>
+          <button class="sites__city">London</button>
+          <button class="sites__city">Jakarta</button>
+          <button class="sites__city">Yokohama</button>
+        </div>
+      </div>
+    </section>
+    <section class="listing">
+      <div class="listing__content">
+        <h2>Your City Not listed?</h2>
+        <p>If you'd like to see Scoot in your hometown, be sure to let us know. We track requests and plan launches based on demand. Feel free to message us by clicking the link or messaging us on social.</p>
+        <button class="listing__button button">Message Us</button>
+      </div>
+    </section>
+    
