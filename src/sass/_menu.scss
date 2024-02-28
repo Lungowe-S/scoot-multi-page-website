@@ -63,7 +63,7 @@
     right: 0;
     left: -32px;
     width: 16rem;
-    height: 71.6vh;
+    height: 76.9vh;
     background-color: $offBlack;
     z-index: 2
 }
@@ -84,4 +84,8 @@
 
 .hamburger__menu {
     cursor: pointer;
+}
+
+.mobile-hero.overlay {
+    filter: grayscale(2);
 }

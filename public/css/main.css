@@ -327,7 +327,7 @@ select {
   right: 0;
   left: -32px;
   width: 16rem;
-  height: 71.6vh;
+  height: 76.9vh;
   background-color: #333a44;
   z-index: 2;
 }
@@ -347,6 +347,10 @@ select {
 
 .hamburger__menu {
   cursor: pointer;
+}
+
+.mobile-hero.overlay {
+  filter: grayscale(2);
 }
 
 .about {
