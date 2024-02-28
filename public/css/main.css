@@ -810,6 +810,9 @@ a {
   .hero__img {
     grid-area: 0;
   }
+  .mobile-hero.overlay {
+    filter: unset;
+  }
   .signup {
     background-position: center bottom;
   }
