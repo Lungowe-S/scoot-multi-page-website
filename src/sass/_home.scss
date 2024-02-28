@@ -112,6 +112,7 @@
 }
 
 .highlights {
+  overflow: hidden;
   &__wrapper {
     display: grid;
     grid-gap: 11.5rem;

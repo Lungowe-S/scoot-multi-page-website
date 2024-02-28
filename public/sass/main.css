@@ -195,6 +195,9 @@ select {
   margin-top: 3rem;
 }
 
+.highlights {
+  overflow: hidden;
+}
 .highlights__wrapper {
   display: grid;
   grid-gap: 11.5rem;
